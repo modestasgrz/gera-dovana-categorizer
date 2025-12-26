@@ -1,4 +1,4 @@
-"""Configuration management for Product Categorizer."""
+"""Configuration management for Gift Voucher Categorizer."""
 
 import json
 from pathlib import Path
@@ -8,12 +8,14 @@ from openai import AsyncOpenAI, AuthenticationError
 from pydantic import BaseModel, ValidationError
 
 # Hardcoded batch size constants
-# CSV Batch size is selected to 500 rows as 500 requests will be made to OpenAI API
 # Tier 1 GPT-5 models allow 500 RPM (Requests Per Minute)
-# This batch size limits requests sent to OpenAI API to exceed maximum allowed lowest tier RPM
+# Rate is limited by tokens also
+# for GPT-5 nano 200,000 tokens per minute (TPM), for GPT-5 mini 500,000 TPM
+# CSV batch size is selected to 50 rows, to read/write data in chunks while processing in progress
+# And rate limits are limiting smooth execution
 # More information on rate limits generally: https://platform.openai.com/docs/guides/rate-limits#page-top
 # More information on limits personalized: https://platform.openai.com/settings/organization/limits
-CSV_BATCH_SIZE = 500  # Rows to read per chunk
+CSV_BATCH_SIZE = 50  # Rows to read per chunk
 API_CONCURRENT_BATCH_SIZE = 50  # Number of concurrent API requests
 
 # CSV configuration
@@ -21,28 +23,12 @@ ENCODINGS = ["utf-8", "cp1252", "latin1"]  # Encoding fallback order
 REQUIRED_COLUMNS = ["ProgramName", "ProgramDescription", "About_Place"]  # Required CSV columns
 
 LOG_LEVEL = "DEBUG"  # Default log level
-RETRY_MIN_WAIT = 30  # RateLimit error minimum wait time in seconds
-RETRY_MAX_WAIT = 60  # RateLimit error maximum wait time in seconds
-RETRY_MAX_ATTEMPTS = 5  # Maximum number of retry attempts for RateLimitError
+RETRY_MIN_WAIT = 10  # RateLimit error minimum wait time in seconds
+RETRY_MAX_WAIT = 30  # RateLimit error maximum wait time in seconds
+RETRY_MAX_ATTEMPTS = 20  # Maximum number of retry attempts for RateLimitError
 
 # User config
 CONFIG_FILE_PATH = Path.home() / ".product_categorizer_config.json"
-
-# Hardcoded category list
-PRODUCT_CATEGORIES = [
-    "spa_wellness",  # SPA, sveikatingumo centrai, masažai, wellness
-    "accommodation",  # Viešbučiai, apgyvendinimas, nakvynė
-    "travel_tourism",  # Kelionės, ekskursijos, turizmas, kelionių agentūros
-    "sports_fitness",  # Sporto klubai, fitnesas, treniruoklių salės
-    "beauty_cosmetics",  # Grožio klinikos, kosmetika, kirpyklos, grožio procedūros
-    "restaurants_food",  # Restoranai, kavinės, maistas, pietūs, vakarienės
-    "entertainment",  # Pramogos, renginiai, šou, spektakliai, koncertai
-    "adventure_activities",  # Rally, skrydžiai balionu, ekstremalios pramogos
-    "shopping_retail",  # Parduotuvių čekiai, apsipirkimas, prekybos centrai
-    "medical_health",  # Medicinos centrai, sveikata, sveikatos patikrinimai
-    "education_workshops",  # Kursai, seminarai, dirbtuvės, mokymai, edukacija
-    "unknown",  # Nežinoma kategorija arba klaida klasifikavimo metu
-]
 
 # Hardcoded available models list
 AVAILABLE_MODELS = [
@@ -52,17 +38,17 @@ AVAILABLE_MODELS = [
 
 
 class Config(BaseModel):
-    """Configuration structure for Product Categorizer."""
+    """Configuration structure for Gift Voucher Categorizer."""
 
     openai_api_key: str
     model_name: str
 
 
 def load_config() -> Config | None:
-    """Load configuration from the config file.
+    """Load configuration from file.
 
     Returns:
-        Config object if successful, None if file doesn't exist or is invalid
+        Config if successful, None otherwise
     """
     if not CONFIG_FILE_PATH.exists():
         logger.debug(f"Config file not found at {CONFIG_FILE_PATH}")
@@ -86,16 +72,14 @@ ACTIVE_CONFIG: Config = load_config() or Config(
 
 
 async def save_config(config: Config) -> None:
-    """Save configuration to context and file.
-
-    Verifies API key with handshake before saving.
+    """Save and verify configuration.
 
     Args:
-        config: Configuration object to save
+        config: Configuration to save
 
     Raises:
-        OSError: If unable to write to config file
-        ValueError: If API key verification fails
+        OSError: If unable to write file
+        ValueError: If API key is invalid
     """
     logger.debug(f"Saving config with model: '{config.model_name}'")
 

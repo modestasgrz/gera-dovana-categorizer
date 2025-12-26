@@ -1,5 +1,6 @@
 """CSV processing orchestration."""
 
+from collections.abc import Callable
 from pathlib import Path
 
 from loguru import logger
@@ -17,14 +18,20 @@ from src.csv_service import (
 from src.llm_service import CategoryOutput, categorize_batch_async
 
 
-async def process_csv_async(input_path: Path) -> tuple[Path, dict[str, int]]:
-    """Process CSV file and categorize products.
+async def process_csv_async(
+    input_path: Path,
+    progress_callback: Callable[[int, int], None] | None = None,
+    rate_limit_callback: Callable[[bool], None] | None = None,
+) -> tuple[Path, dict[str, int]]:
+    """Process CSV file and categorize products using OpenAI API.
+
     Args:
         input_path: Path to input CSV file
+        progress_callback: Optional callback(rows_processed, total_rows)
+        rate_limit_callback: Optional callback(is_waiting) for rate limit status
 
     Returns:
         Tuple of (output_path, summary_stats)
-        summary_stats: {"total": int, "categorized": int, "unknown": int}
     """
     # Create OpenAI client
     client = AsyncOpenAI(api_key=ACTIVE_CONFIG.openai_api_key)
@@ -38,8 +45,7 @@ async def process_csv_async(input_path: Path) -> tuple[Path, dict[str, int]]:
 
     output_columns = [*input_columns, "category", "comment"]
 
-    # Count rows efficiently by reading raw lines instead of parsing CSV
-    # TODO: research senior ways to count rows
+    # Count rows by reading raw lines instead of parsing CSV
     with input_path.open(encoding=encoding) as f:
         total_rows = sum(1 for _ in f) - 1  # Subtract 1 for header row
 
@@ -59,7 +65,7 @@ async def process_csv_async(input_path: Path) -> tuple[Path, dict[str, int]]:
         products = [extract_product_input(row) for row in rows]
         # AsyncOpenAI client is thread-safe and designed to be shared across concurrent requests
         results: list[CategoryOutput] = await categorize_batch_async(
-            client, products, ACTIVE_CONFIG.model_name
+            client, products, ACTIVE_CONFIG.model_name, rate_limit_callback
         )
 
         for row, result in zip(rows, results, strict=True):
@@ -76,6 +82,10 @@ async def process_csv_async(input_path: Path) -> tuple[Path, dict[str, int]]:
         offset += len(rows)
 
         logger.info(f"Processed {offset}/{total_rows} rows")
+
+        # Call progress callback if provided
+        if progress_callback:
+            progress_callback(offset, total_rows)
 
     logger.success(f"Categorization complete. Output: {output_path}")
     logger.info(f"Summary: {summary}")

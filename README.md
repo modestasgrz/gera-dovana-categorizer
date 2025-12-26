@@ -1,28 +1,76 @@
-# Product Categorizer
+# Gift voucher categorizer
 
-AI-powered categorization tool for Lithuanian gift voucher products using OpenAI GPT-5.
-
-## Overview
-
-This application automatically categorizes Lithuanian gift voucher CSV data by analyzing product names, descriptions, and locations. It adds a `category` column to your CSV file using state-of-the-art AI classification.
-
-## Features
-
-- **Direct Lithuanian text processing** - No translation needed
-- **High performance** - Process 13,000+ rows in under 10 minutes
-- **Cross-platform** - Works on macOS, Windows, and Linux
-- **User-friendly GUI** - No terminal required
-- **Configurable models** - Support for GPT-5-nano, GPT-5-mini, and GPT-4o
-- **Memory efficient** - Chunked processing for large files
-- **Auto-encoding detection** - Handles various CSV encodings automatically
+This application automatically categorizes gift voucher CSV data by analyzing product names, descriptions, and locations. It adds a `category` column to your CSV file using AI classification.
 
 ## Installation
 
-_Coming soon_
+### Pre-built Executables
+
+Download the executable for your platform from the releases page:
+- **macOS**: `GiftVoucherCategorizer.app`
+- **Windows**: `GiftVoucherCategorizer.exe`
+- **Linux**: `GiftVoucherCategorizer` (requires `chmod +x`)
+
+### From Source
+
+```bash
+git clone <repository-url>
+cd gera-dovana-categories
+uv sync
+uv run python src/main.py
+```
+
+**Requirements**: Python 3.12+, [uv](https://docs.astral.sh/uv/)
+
+## Configuration
+
+### OpenAI API Key
+
+Get your API key from [OpenAI Platform](https://platform.openai.com/) → API keys.
+
+Processing ~1,000 rows costs about $1 (depending on description lengths) and takes about 20 minutes using the GPT-5 nano model.
+
+### Model Selection
+
+| Model | Comment |
+|-------|---------|
+| `gpt-5-nano-2025-08-07` (default) | Fast, low cost, should be good enough | 
+| `gpt-5-mini-2025-08-07` | Slower, higher cost, smarter |
 
 ## Usage
 
-_Coming soon_
+1. Launch the application and enter your OpenAI API key
+2. Select your CSV file (must contain: `ProgramName`, `ProgramDescription`, `About_Place`)
+3. Click **Run Categorization**
+4. Output saved as `<original_name>_categorized.csv` in the same directory
+
+### Input/Output
+
+**Required columns:**
+- `ProgramName`, `ProgramDescription`, `About_Place`
+
+**Added columns:**
+- `category` - GD category ID or `Unknown`
+- `comment` - Confidence score and reasoning
+
+All original columns are preserved.
+
+### Troubleshooting
+
+**Invalid API key:**
+- Verify key format (`sk-...`) and OpenAI account credits
+
+**File encoding error:**
+- Re-save CSV as UTF-8
+
+**Invalid CSV file:**
+- Verify required columns: `ProgramName`, `ProgramDescription`, `About_Place`
+
+**macOS security warning:**
+- Right-click app → "Open" or Settings → Security & Privacy → "Open Anyway"
+
+**Windows Defender warning:**
+- Click "More info" → "Run anyway"
 
 ## Development
 
@@ -41,21 +89,39 @@ uv sync --all-extras
 Run tests:
 
 ```bash
-uv run pytest
+make test
 ```
 
-Run linter:
+Run linter + formatter + type checker:
 
 ```bash
-uv run ruff check src/ tests/
+make check
 ```
 
-Run type checker:
+## Building from Source
+
+**Requirements:** Python 3.12+, [uv](https://docs.astral.sh/uv/)
+
+### Build
 
 ```bash
-uv run mypy src/
+# macOS/Linux
+./build.sh
+
+# Windows
+build.bat
 ```
 
-## License
+### Clean
 
-_To be determined_
+```bash
+./build.sh clean  # or build.bat clean
+```
+
+### Output
+
+- **macOS**: `dist/GiftVoucherCategorizer.app` (~39MB)
+- **Windows**: `dist/GiftVoucherCategorizer.exe` (~35-40MB)
+- **Linux**: `dist/GiftVoucherCategorizer` (~35-40MB)
+
+Build configuration: `product_categorizer.spec`

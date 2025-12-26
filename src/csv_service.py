@@ -13,8 +13,6 @@ from src.llm_service import ProductInput
 def detect_encoding(file_path: Path) -> str:
     """Detect CSV file encoding using fallback strategy.
 
-    Tries encodings listed in ENCODINGS from src/config.py.
-
     Args:
         file_path: Path to the CSV file
 
@@ -22,7 +20,7 @@ def detect_encoding(file_path: Path) -> str:
         Detected encoding name
 
     Raises:
-        ValueError: If all encoding attempts fail
+        ValueError: If all encodings fail
     """
     for encoding in ENCODINGS:
         try:
@@ -46,9 +44,9 @@ def read_csv_chunk(file_path: Path, offset: int, limit: int, encoding: str) -> l
     """Read a chunk of rows from CSV file.
 
     Args:
-        file_path: Path to the CSV file
-        offset: Starting row index (0-based, excluding header)
-        limit: Maximum number of rows to read
+        file_path: Path to CSV file
+        offset: Starting row index
+        limit: Maximum rows to read
         encoding: File encoding
 
     Returns:
@@ -60,14 +58,14 @@ def read_csv_chunk(file_path: Path, offset: int, limit: int, encoding: str) -> l
 
 
 def get_csv_columns(file_path: Path, encoding: str) -> list[str]:
-    """Get column names from CSV file.
+    """Get column names from CSV header.
 
     Args:
-        file_path: Path to the CSV file
+        file_path: Path to CSV file
         encoding: File encoding
 
     Returns:
-        List of column names from CSV header
+        List of column names
     """
     with file_path.open(encoding=encoding, newline="") as f:
         reader = csv.DictReader(f)
@@ -78,10 +76,10 @@ def validate_csv_columns(columns: list[str]) -> None:
     """Validate that CSV has all required columns.
 
     Args:
-        columns: List of column names from CSV
+        columns: Column names from CSV
 
     Raises:
-        ValueError: If any required columns are missing
+        ValueError: If required columns are missing
     """
     missing = [col for col in REQUIRED_COLUMNS if col not in columns]
     if missing:
@@ -99,9 +97,9 @@ def extract_product_input(row: dict[str, str]) -> ProductInput:
         ProductInput object
     """
     return ProductInput(
-        ProgramName=row.get("ProgramName", ""),
-        ProgramDescription=row.get("ProgramDescription", ""),
-        About_Place=row.get("About_Place", ""),
+        program_name=row.get("ProgramName", ""),
+        program_description=row.get("ProgramDescription", ""),
+        about_place=row.get("About_Place", ""),
     )
 
 
@@ -115,11 +113,11 @@ def write_csv_chunk(
     """Write a chunk of rows to output CSV.
 
     Args:
-        output_path: Path to output CSV file
-        rows: List of row dictionaries (with category and comment)
-        is_first_chunk: Whether this is the first chunk (write header)
+        output_path: Output file path
+        rows: Row dictionaries to write
+        is_first_chunk: Whether to write header
         encoding: File encoding
-        output_columns: List of output column names
+        output_columns: Column names
     """
     mode = "w" if is_first_chunk else "a"
 

@@ -1,4 +1,4 @@
-"""Logging utilities for Product Categorizer."""
+"""Logging utilities for Gift Voucher Categorizer."""
 
 import sys
 
@@ -8,11 +8,7 @@ from src.config import LOG_LEVEL
 
 
 def setup_logging() -> None:
-    """Configure loguru logger for console output only.
-
-    Removes default handler and adds a custom console handler
-    with appropriate formatting for terminal output.
-    """
+    """Configure loguru logger for console output."""
     # Remove default handler
     logger.remove()
 

@@ -1,7 +1,8 @@
-"""GUI application for Product Categorizer."""
+"""GUI application for Gift Voucher Categorizer."""
 
 import asyncio
 import threading
+import time
 import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
@@ -13,13 +14,13 @@ from src.core import process_csv_async
 
 
 def prompt_for_config(root: tk.Tk | None = None) -> Config | None:  # noqa: PLR0915, ARG001
-    """Show modal dialog to collect API key and model name.
+    """Show modal dialog to collect API key and model.
 
     Args:
-        root: Parent tkinter window (unused, kept for compatibility)
+        root: Parent window (unused)
 
     Returns:
-        Config object if successfully saved, None if user cancelled
+        Config if saved, None if cancelled
     """
     # Load current config to prefill values
     current_config = load_config()
@@ -138,22 +139,31 @@ def prompt_for_config(root: tk.Tk | None = None) -> Config | None:  # noqa: PLR0
 
 
 class ProductCategorizerApp:
-    """Main GUI application for Product Categorizer."""
+    """Main GUI application for Gift Voucher Categorizer."""
 
     def __init__(self, root: tk.Tk) -> None:
-        """Initialize the application window.
+        """Initialize the application.
 
         Args:
             root: Tkinter root window
         """
         self.root = root
-        self.root.title("Product Categorizer")
+        self.root.title("Gift Voucher Categorizer")
         self.root.geometry("700x500")
         self.root.resizable(False, False)
 
         # Application state
         self.selected_file: Path | None = None
         self.is_processing = False
+
+        # Progress tracking labels (initialized later in _build_ui)
+        self.time_elapsed_label: tk.Label | None = None
+        self.progress_label: tk.Label | None = None
+        self.rate_limit_label: tk.Label | None = None
+
+        # Timer state
+        self.start_time: float | None = None
+        self.timer_job: str | None = None
 
         # Build UI
         self._build_ui()
@@ -167,7 +177,7 @@ class ProductCategorizerApp:
 
         title_label = tk.Label(
             header_frame,
-            text="Product Categorizer",
+            text="Gift Voucher Categorizer",
             font=("Helvetica", 24, "bold"),
         )
         title_label.pack(pady=20)
@@ -220,7 +230,39 @@ class ProductCategorizerApp:
             font=("Courier", 9),
             state=tk.DISABLED,
         )
-        self.status_text.pack(fill=tk.BOTH, expand=True)
+        self.status_text.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
+
+        # Progress labels frame
+        progress_frame = tk.Frame(status_section)
+        progress_frame.pack(fill=tk.X)
+
+        # 1. Time elapsed label
+        self.time_elapsed_label = tk.Label(
+            progress_frame,
+            text="",
+            font=("Helvetica", 9),
+            anchor=tk.W,
+        )
+        self.time_elapsed_label.pack(fill=tk.X, pady=(0, 2))
+
+        # 2. Row counter label
+        self.progress_label = tk.Label(
+            progress_frame,
+            text="",
+            font=("Helvetica", 9),
+            anchor=tk.W,
+        )
+        self.progress_label.pack(fill=tk.X, pady=(0, 2))
+
+        # 3. Rate limit label
+        self.rate_limit_label = tk.Label(
+            progress_frame,
+            text="",
+            font=("Helvetica", 9),
+            fg="#D97706",
+            anchor=tk.W,
+        )
+        self.rate_limit_label.pack(fill=tk.X)
 
         self._update_status("Ready. Please select a CSV file to begin.")
 
@@ -295,6 +337,9 @@ class ProductCategorizerApp:
         self._update_status(f"Starting categorization of {self.selected_file.name}...")
         self._update_status(f"Using model: {ACTIVE_CONFIG.model_name}")
 
+        # Start the elapsed time timer
+        self._start_timer()
+
         def run_in_thread() -> None:
             try:
                 self._validate_and_process()
@@ -305,14 +350,73 @@ class ProductCategorizerApp:
         thread = threading.Thread(target=run_in_thread, daemon=True)
         thread.start()
 
+    def _update_progress(self, processed: int, total: int) -> None:
+        """Update progress label (thread-safe).
+
+        Args:
+            processed: Number of rows processed
+            total: Total number of rows
+        """
+
+        def update() -> None:
+            if self.progress_label:
+                self.progress_label.config(text=f"{processed}/{total} rows processed")
+
+        self.root.after(0, update)
+
+    def _update_rate_limit_status(self, is_waiting: bool) -> None:
+        """Update rate limit status label (thread-safe).
+
+        Args:
+            is_waiting: True if waiting for rate limit reset, False otherwise
+        """
+
+        def update() -> None:
+            if self.rate_limit_label:
+                if is_waiting:
+                    self.rate_limit_label.config(text="⏳ Waiting for rate limit reset...")
+                else:
+                    self.rate_limit_label.config(text="")
+
+        self.root.after(0, update)
+
+    def _start_timer(self) -> None:
+        """Start the elapsed time timer."""
+        self.start_time = time.time()
+        self._update_timer()
+
+    def _update_timer(self) -> None:
+        """Update the elapsed time display every second."""
+        if self.start_time is not None and self.is_processing:
+            elapsed_seconds = int(time.time() - self.start_time)
+            minutes = elapsed_seconds // 60
+            seconds = elapsed_seconds % 60
+            if self.time_elapsed_label:
+                self.time_elapsed_label.config(text=f"Time elapsed: {minutes:02d}:{seconds:02d}")
+            # Schedule next update in 1 second
+            self.timer_job = self.root.after(1000, self._update_timer)
+
+    def _stop_timer(self) -> None:
+        """Stop the elapsed time timer."""
+        if self.timer_job:
+            self.root.after_cancel(self.timer_job)
+            self.timer_job = None
+        self.start_time = None
+
     def _validate_and_process(self) -> None:
         """Validate file selection and run processing."""
         if not self.selected_file:
             msg = "No file selected"
             raise ValueError(msg)
 
-        # Run async CSV processing
-        output_path, summary = asyncio.run(process_csv_async(self.selected_file))
+        # Run async CSV processing with callbacks
+        output_path, summary = asyncio.run(
+            process_csv_async(
+                self.selected_file,
+                progress_callback=self._update_progress,
+                rate_limit_callback=self._update_rate_limit_status,
+            )
+        )
 
         # Update UI on success (schedule on main thread)
         self.root.after(0, self._on_processing_complete, output_path, summary)
@@ -326,6 +430,17 @@ class ProductCategorizerApp:
         """
         self.is_processing = False
         self.run_button.config(state=tk.NORMAL, text="Run Categorization")
+
+        # Stop timer
+        self._stop_timer()
+
+        # Clear progress labels
+        if self.time_elapsed_label:
+            self.time_elapsed_label.config(text="")
+        if self.progress_label:
+            self.progress_label.config(text="")
+        if self.rate_limit_label:
+            self.rate_limit_label.config(text="")
 
         self._update_status("\n✓ Categorization complete!")
         self._update_status(f"Output file: {output_path}")
@@ -351,6 +466,17 @@ class ProductCategorizerApp:
         """
         self.is_processing = False
         self.run_button.config(state=tk.NORMAL, text="Run Categorization")
+
+        # Stop timer
+        self._stop_timer()
+
+        # Clear progress labels
+        if self.time_elapsed_label:
+            self.time_elapsed_label.config(text="")
+        if self.progress_label:
+            self.progress_label.config(text="")
+        if self.rate_limit_label:
+            self.rate_limit_label.config(text="")
 
         self._update_status(f"\n✗ Error: {error_message}")
         messagebox.showerror("Processing Error", f"An error occurred:\n\n{error_message}")

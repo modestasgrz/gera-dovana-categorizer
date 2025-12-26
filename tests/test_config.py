@@ -9,7 +9,6 @@ from openai import AuthenticationError
 from src.config import Config, load_config, save_config
 
 
-# TODO: needs an update after model asking for values is implemented
 def test_load_config_file_not_found(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test loading config when file doesn't exist."""
     # Use a non-existent path
@@ -37,7 +36,6 @@ def test_load_config_valid(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> N
     assert result.model_name == "gpt-5-nano-2025-08-07"
 
 
-# TODO: needs an update after model asking for values is implemented
 def test_load_config_missing_fields(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test loading config with missing required fields."""
     config_file = tmp_path / ".product_categorizer_config.json"
@@ -51,8 +49,6 @@ def test_load_config_missing_fields(tmp_path: Path, monkeypatch: pytest.MonkeyPa
     assert result is None
 
 
-# TODO: needs an update after model asking for values is implemented.
-# TODO: malformed JSON must trigger that modal as well
 def test_load_config_malformed_json(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test loading config with malformed JSON."""
     config_file = tmp_path / ".product_categorizer_config.json"
@@ -121,9 +117,7 @@ async def test_save_and_load_roundtrip(tmp_path: Path, monkeypatch: pytest.Monke
 
 
 @pytest.mark.asyncio
-async def test_save_config_invalid_api_key(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
-) -> None:
+async def test_save_config_invalid_api_key(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test saving config with invalid API key raises error."""
     config_file = tmp_path / ".product_categorizer_config.json"
     monkeypatch.setattr("src.config.CONFIG_FILE_PATH", config_file)
@@ -144,7 +138,7 @@ async def test_save_config_invalid_api_key(
         model_name="gpt-5-nano-2025-08-07",
     )
 
-    with pytest.raises(ValueError, match=r"Authentication error\. Invalid API key"):
+    with pytest.raises(ValueError, match=r"Invalid API key provided"):
         await save_config(config)
 
     assert not config_file.exists()

@@ -1,4 +1,4 @@
-"""Main entrypoint for Product Categorizer."""
+"""Main entrypoint for Gift Voucher Categorizer."""
 
 import tkinter as tk
 
@@ -13,7 +13,7 @@ def main() -> None:
     """Main application entry point."""
     # Setup logging
     setup_logging()
-    logger.info("Starting Product Categorizer")
+    logger.info("Starting Gift Voucher Categorizer")
 
     # Check if config exists
     config = load_config()

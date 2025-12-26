@@ -19,45 +19,26 @@ async def test_categorize_product_async_success() -> None:
     mock_client = AsyncMock()
     mock_response = Mock()
     mock_response.choices = [Mock()]
-    mock_response.choices[0].message.content = json.dumps({"category": "spa_wellness"})
+    comment = (
+        "Chosen SPA ir masažai (spa-ir-masazai) (0.80); considered Unknown (0.10) but clear SPA."
+    )
+    mock_response.choices[0].message.content = json.dumps(
+        {"category": "SPA ir masažai (spa-ir-masazai)", "comment": comment}
+    )
 
     mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
 
     product = ProductInput(
-        ProgramName="SPA poilsis",
-        ProgramDescription="Masažai ir procedūros",
-        About_Place="Vilnius",
+        program_name="SPA poilsis",
+        program_description="Masažai ir procedūros",
+        about_place="Vilnius",
     )
 
     result = await categorize_product_async(mock_client, product, "gpt-5-nano")
 
     assert isinstance(result, CategoryOutput)
-    assert result.category == "spa_wellness"
-    assert result.comment == ""
-    mock_client.chat.completions.create.assert_called_once()
-
-
-@pytest.mark.asyncio
-async def test_categorize_product_async_invalid_category() -> None:
-    """Test that invalid categories are converted to unknown."""
-    mock_client = AsyncMock()
-    mock_response = Mock()
-    mock_response.choices = [Mock()]
-    mock_response.choices[0].message.content = json.dumps({"category": "invalid_category"})
-
-    mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
-
-    product = ProductInput(
-        ProgramName="Test",
-        ProgramDescription="Test",
-        About_Place="Test",
-    )
-
-    result = await categorize_product_async(mock_client, product, "gpt-5-nano")
-
-    assert isinstance(result, CategoryOutput)
-    assert result.category == "unknown"
-    assert result.comment == "Invalid category returned by model"
+    assert result.category == "SPA ir masažai (spa-ir-masazai)"
+    assert result.comment.startswith("Chosen SPA ir masažai (spa-ir-masazai)")
     mock_client.chat.completions.create.assert_called_once()
 
 
@@ -72,9 +53,9 @@ async def test_categorize_product_async_empty_response() -> None:
     mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
 
     product = ProductInput(
-        ProgramName="Test",
-        ProgramDescription="Test",
-        About_Place="Test",
+        program_name="Test",
+        program_description="Test",
+        about_place="Test",
     )
 
     result = await categorize_product_async(mock_client, product, "gpt-5-nano")
@@ -96,9 +77,9 @@ async def test_categorize_product_async_malformed_json() -> None:
     mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
 
     product = ProductInput(
-        ProgramName="Test",
-        ProgramDescription="Test",
-        About_Place="Test",
+        program_name="Test",
+        program_description="Test",
+        about_place="Test",
     )
 
     result = await categorize_product_async(mock_client, product, "gpt-5-nano")
@@ -115,7 +96,12 @@ async def test_categorize_product_async_rate_limit_retry() -> None:
     mock_client = AsyncMock()
     mock_response = Mock()
     mock_response.choices = [Mock()]
-    mock_response.choices[0].message.content = json.dumps({"category": "spa_wellness"})
+    mock_response.choices[0].message.content = json.dumps(
+        {
+            "category": "Vandens pramogos (vandens-pramogos)",
+            "comment": "Chosen Vandens pramogos (vandens-pramogos) (0.62); considered Unknown (0.18) but water activity.",  # noqa: E501
+        }
+    )
 
     # First call raises RateLimitError, second call succeeds
     mock_client.chat.completions.create = AsyncMock(
@@ -130,14 +116,14 @@ async def test_categorize_product_async_rate_limit_retry() -> None:
     )
 
     product = ProductInput(
-        ProgramName="Test",
-        ProgramDescription="Test",
-        About_Place="Test",
+        program_name="Test",
+        program_description="Test",
+        about_place="Test",
     )
 
     result = await categorize_product_async(mock_client, product, "gpt-5-nano")
 
-    assert result.category == "spa_wellness"
+    assert result.category == "Vandens pramogos (vandens-pramogos)"
     assert mock_client.chat.completions.create.call_count == 2
 
 
@@ -154,9 +140,9 @@ async def test_categorize_product_async_rate_limit_error() -> None:
     )
 
     product = ProductInput(
-        ProgramName="Test",
-        ProgramDescription="Test",
-        About_Place="Test",
+        program_name="Test",
+        program_description="Test",
+        about_place="Test",
     )
 
     # RateLimitError should be caught after exhausted retries and return CategoryOutput with unknown
@@ -166,8 +152,8 @@ async def test_categorize_product_async_rate_limit_error() -> None:
     assert result.category == "unknown"
     assert "Rate limit exceeded" in result.comment
 
-    # Should have called 5 times as per stop_after_attempt(5)
-    assert mock_client.chat.completions.create.call_count == 5
+    # Should have called 6 times as per stop_after_attempt(6)
+    assert mock_client.chat.completions.create.call_count == 6
 
 
 @pytest.mark.asyncio
@@ -183,9 +169,9 @@ async def test_categorize_product_async_api_error() -> None:
     )
 
     product = ProductInput(
-        ProgramName="Test",
-        ProgramDescription="Test",
-        About_Place="Test",
+        program_name="Test",
+        program_description="Test",
+        about_place="Test",
     )
 
     # APIError should be caught and return CategoryOutput with unknown
@@ -203,9 +189,9 @@ async def test_categorize_product_async_unexpected_error() -> None:
     mock_client.chat.completions.create = AsyncMock(side_effect=ValueError("Unexpected error"))
 
     product = ProductInput(
-        ProgramName="Test",
-        ProgramDescription="Test",
-        About_Place="Test",
+        program_name="Test",
+        program_description="Test",
+        about_place="Test",
     )
 
     result = await categorize_product_async(mock_client, product, "gpt-5-nano")
@@ -224,32 +210,37 @@ async def test_categorize_batch_async_success() -> None:
     def create_mock_response(category: str) -> Mock:
         mock_response = Mock()
         mock_response.choices = [Mock()]
-        mock_response.choices[0].message.content = json.dumps({"category": category})
+        mock_response.choices[0].message.content = json.dumps(
+            {
+                "category": category,
+                "comment": f"Chosen {category} (0.70); considered Unknown (0.10) but matches.",
+            }
+        )
         return mock_response
 
     mock_client.chat.completions.create = AsyncMock(
         side_effect=[
-            create_mock_response("spa_wellness"),
-            create_mock_response("restaurants_food"),
-            create_mock_response("accommodation"),
+            create_mock_response("SPA ir masažai (spa-ir-masazai)"),
+            create_mock_response("Vakarienės (vakarienes)"),
+            create_mock_response("Poilsis Lietuvoje (poilsis-su-nakvyne)"),
         ]
     )
 
     products: list[ProductInput] = [
         ProductInput(
-            ProgramName="SPA",
-            ProgramDescription="Masažai",
-            About_Place="Vilnius",
+            program_name="SPA",
+            program_description="Masažai",
+            about_place="Vilnius",
         ),
         ProductInput(
-            ProgramName="Restoranas",
-            ProgramDescription="Pietūs",
-            About_Place="Kaunas",
+            program_name="Restoranas",
+            program_description="Pietūs",
+            about_place="Kaunas",
         ),
         ProductInput(
-            ProgramName="Viešbutis",
-            ProgramDescription="Nakvynė",
-            About_Place="Klaipėda",
+            program_name="Viešbutis",
+            program_description="Nakvynė",
+            about_place="Klaipėda",
         ),
     ]
 
@@ -258,11 +249,11 @@ async def test_categorize_batch_async_success() -> None:
     # Wrap in gather check since gather return values might be wrapped
     assert len(results) == 3
     assert isinstance(results[0], CategoryOutput)
-    assert results[0].category == "spa_wellness"
+    assert results[0].category == "SPA ir masažai (spa-ir-masazai)"
     assert isinstance(results[1], CategoryOutput)
-    assert results[1].category == "restaurants_food"
+    assert results[1].category == "Vakarienės (vakarienes)"
     assert isinstance(results[2], CategoryOutput)
-    assert results[2].category == "accommodation"
+    assert results[2].category == "Poilsis Lietuvoje (poilsis-su-nakvyne)"
 
 
 @pytest.mark.asyncio
@@ -273,29 +264,34 @@ async def test_categorize_batch_async_with_exceptions() -> None:
     def create_mock_response(category: str) -> Mock:
         mock_response = Mock()
         mock_response.choices = [Mock()]
-        mock_response.choices[0].message.content = json.dumps({"category": category})
+        mock_response.choices[0].message.content = json.dumps(
+            {
+                "category": category,
+                "comment": f"Chosen {category} (0.70); considered Unknown (0.10) but matches.",
+            }
+        )
         return mock_response
 
     # First succeeds, second fails, third succeeds
     mock_client.chat.completions.create = AsyncMock(
         side_effect=[
-            create_mock_response("spa_wellness"),
+            create_mock_response("SPA ir masažai (spa-ir-masazai)"),
             ValueError("Test error"),
-            create_mock_response("accommodation"),
+            create_mock_response("Poilsis Lietuvoje (poilsis-su-nakvyne)"),
         ]
     )
 
     products: list[ProductInput] = [
-        ProductInput(ProgramName="SPA", ProgramDescription="Test", About_Place="Test"),
+        ProductInput(program_name="SPA", program_description="Test", about_place="Test"),
         ProductInput(
-            ProgramName="Error",
-            ProgramDescription="Test",
-            About_Place="Test",
+            program_name="Error",
+            program_description="Test",
+            about_place="Test",
         ),
         ProductInput(
-            ProgramName="Hotel",
-            ProgramDescription="Test",
-            About_Place="Test",
+            program_name="Hotel",
+            program_description="Test",
+            about_place="Test",
         ),
     ]
 
@@ -303,12 +299,12 @@ async def test_categorize_batch_async_with_exceptions() -> None:
 
     assert len(results) == 3
     assert isinstance(results[0], CategoryOutput)
-    assert results[0].category == "spa_wellness"
+    assert results[0].category == "SPA ir masažai (spa-ir-masazai)"
     assert isinstance(results[1], CategoryOutput)
     assert results[1].category == "unknown"
     assert "Unexpected error" in results[1].comment
     assert isinstance(results[2], CategoryOutput)
-    assert results[2].category == "accommodation"
+    assert results[2].category == "Poilsis Lietuvoje (poilsis-su-nakvyne)"
 
 
 @pytest.mark.asyncio

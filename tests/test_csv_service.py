@@ -79,9 +79,9 @@ def test_extract_product_input() -> None:
     product = extract_product_input(row)
 
     assert isinstance(product, ProductInput)
-    assert product.ProgramName == "Test Program"
-    assert product.ProgramDescription == "Test Description"
-    assert product.About_Place == "Test Place"
+    assert product.program_name == "Test Program"
+    assert product.program_description == "Test Description"
+    assert product.about_place == "Test Place"
 
 
 def test_extract_product_input_missing_fields() -> None:
@@ -90,9 +90,9 @@ def test_extract_product_input_missing_fields() -> None:
 
     product = extract_product_input(row)
 
-    assert product.ProgramName == "Test"
-    assert product.ProgramDescription == ""
-    assert product.About_Place == ""
+    assert product.program_name == "Test"
+    assert product.program_description == ""
+    assert product.about_place == ""
 
 
 def test_write_csv_chunk_first(tmp_path: Path) -> None:

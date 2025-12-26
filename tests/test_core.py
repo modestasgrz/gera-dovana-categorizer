@@ -31,7 +31,6 @@ async def test_process_csv_async(tmp_path: Path) -> None:
     ]
 
     with (
-        patch("src.core.OPENAI_API_KEY", "test-api-key"),
         patch("src.core.AsyncOpenAI", return_value=mock_client),
         patch("src.core.categorize_batch_async", return_value=mock_results),
     ):
@@ -74,7 +73,6 @@ async def test_process_csv_async_with_unknown_categories(tmp_path: Path) -> None
     mock_results = [CategoryOutput(category="unknown", comment="API error")]
 
     with (
-        patch("src.core.OPENAI_API_KEY", "test-api-key"),
         patch("src.core.AsyncOpenAI", return_value=mock_client),
         patch("src.core.categorize_batch_async", return_value=mock_results),
     ):
