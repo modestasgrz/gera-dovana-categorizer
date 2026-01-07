@@ -22,7 +22,7 @@ Top level:
 3) Food, drink, dining, tasting, culinary? -> Food & Drink
 4) Travel, stays, accommodation, city passes? -> Stay & Travel
 5) Culture, creative, learning, arts, events, venues? -> Culture & Creative
-6) Retail, subscriptions, vouchers for goods? -> Retail & Subscriptions
+6) Retail, subscriptions, vouchers for goods, gift sets, charity gifts? -> Retail & Subscriptions
 7) Otherwise -> Unknown
 
 Adventure & Active:
@@ -171,9 +171,18 @@ S1) Accommodation/stays? -> 280
     - Stay for two? -> 290
     - Stay for one? -> 291
     - Other stay -> 280
-S2) City pass/card? -> 479
+S2) Abroad gifts/experiences? -> 249
+    - Latvia experiences? -> 476
+    - Other abroad gifts -> 249
+S3) Abroad stays/relaxation? -> 469
+    - Stay in Latvia? -> 473
+    - Stay in Estonia? -> 477
+    - Stay in Poland? -> 478
+    - Other countries? -> 488
+    - Other abroad stays -> 469
+S4) City pass/card? -> 479
     - City card (any)? -> 479
-S3) Otherwise in this theme -> Unknown
+S5) Otherwise in this theme -> Unknown
 
 Culture & Creative:
 C1) Creative/fun gifts, media, venues, classes? -> 304
@@ -203,5 +212,15 @@ C6) Otherwise in this theme -> Unknown
 Retail & Subscriptions:
 RS1) Magazine subscription? -> 442
     - Any magazine subscription -> 442
-RS2) Otherwise in this theme -> Unknown
+RS2) Publication/periodical subscription (non-magazine)? -> 378
+    - Other publication subscription -> 378
+RS3) Gift sets? -> 375
+    - Other gift sets -> 375
+RS4) Store gift vouchers? -> 376
+    - Other store gift vouchers -> 376
+RS5) Shopping center gift cards? -> 377
+    - Other shopping center gift cards -> 377
+RS6) Charity/meaningful gifts? -> 452
+    - Other charity gifts -> 452
+RS7) Otherwise in this theme -> Unknown
 """

@@ -31,6 +31,8 @@ a = Analysis(
         'src.llm_service',
         'src.logging_utils',
         'src.main',
+        'categories',
+        'categories.categories',
         'prompts',
         'prompts.v1',
         'openai',

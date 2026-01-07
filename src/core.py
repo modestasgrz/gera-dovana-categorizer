@@ -3,6 +3,7 @@
 from collections.abc import Callable
 from pathlib import Path
 
+from categories.categories import CATEGORY_URL_MAP
 from loguru import logger
 from openai import AsyncOpenAI
 
@@ -43,7 +44,7 @@ async def process_csv_async(
     validate_csv_columns(input_columns)
     logger.debug(f"CSV columns: {input_columns}")
 
-    output_columns = [*input_columns, "category", "comment"]
+    output_columns = [*input_columns, "category_id", "category_url", "comment"]
 
     # Count rows by reading raw lines instead of parsing CSV
     with input_path.open(encoding=encoding) as f:
@@ -69,9 +70,11 @@ async def process_csv_async(
         )
 
         for row, result in zip(rows, results, strict=True):
-            row["category"] = str(result.category)
+            category_id = str(result.category)
+            row["category_id"] = category_id
+            row["category_url"] = CATEGORY_URL_MAP.get(category_id, "")
             row["comment"] = str(result.comment)
-            if str(result.category).lower() == "unknown":
+            if category_id.lower() == "unknown":
                 summary["unknown"] += 1
             else:
                 summary["categorized"] += 1

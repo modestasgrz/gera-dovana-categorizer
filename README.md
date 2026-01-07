@@ -1,6 +1,6 @@
 # Gift voucher categorizer
 
-This application automatically categorizes gift voucher CSV data by analyzing product names, descriptions, and locations. It adds a `category` column to your CSV file using AI classification.
+This application automatically categorizes gift voucher CSV data by analyzing product names, descriptions, and locations. It adds `category_id`, `category_url`, and `comment` columns to your CSV file using AI classification.
 
 ## Installation
 
@@ -50,7 +50,8 @@ Processing ~1,000 rows costs about $1 (depending on description lengths) and tak
 - `ProgramName`, `ProgramDescription`, `About_Place`
 
 **Added columns:**
-- `category` - GD category ID or `Unknown`
+- `category_id` - GD category ID or `unknown`
+- `category_url` - URL to the category page on GerasDovana.lt
 - `comment` - Confidence score and reasoning
 
 All original columns are preserved.

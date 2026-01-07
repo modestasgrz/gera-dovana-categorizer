@@ -51,8 +51,9 @@ async def test_process_csv_async(tmp_path: Path) -> None:
         result_rows = list(reader)
 
     assert len(result_rows) == 2
-    assert result_rows[0]["category"] == "spa_wellness"
-    assert result_rows[1]["category"] == "restaurants_food"
+    assert result_rows[0]["category_id"] == "spa_wellness"
+    assert result_rows[1]["category_id"] == "restaurants_food"
+    assert result_rows[0]["category_url"] == ""  # Unknown categories have empty URL
     # Verify original columns preserved
     assert result_rows[0]["ExtraCol"] == "Extra1"
 

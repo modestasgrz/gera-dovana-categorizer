@@ -66,13 +66,13 @@ async def test_integration_processes_sample_csv(tmp_path: Path) -> None:
         output_columns = list(output_reader.fieldnames or [])
         output_rows = list(output_reader)
 
-    assert output_columns == [*input_columns, "category", "comment"]
+    assert output_columns == [*input_columns, "category_id", "category_url", "comment"]
     assert len(output_rows) == len(input_rows)
     assert summary["total"] == len(input_rows)
     assert summary["categorized"] == len(input_rows)
     assert summary["unknown"] == 0
 
-    categories = {row["category"] for row in output_rows}
+    categories = {row["category_id"] for row in output_rows}
     assert categories == {"spa_wellness"}
 
 
@@ -176,4 +176,5 @@ async def test_integration_network_error_marks_unknown(tmp_path: Path) -> None:
         reader = csv.DictReader(f)
         rows = list(reader)
 
-    assert all(row["category"] == "unknown" for row in rows)
+    assert all(row["category_id"] == "unknown" for row in rows)
+    assert all(row["category_url"] == "" for row in rows)  # Unknown has empty URL

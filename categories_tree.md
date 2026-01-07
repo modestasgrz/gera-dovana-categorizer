@@ -148,6 +148,15 @@ GD Categories
 |   |   \-- Poilsis Lietuvoje (280)
 |   |-- Miestų kortelės (479)
 |   |   \-- Miestų kortelės (479)
+|   |-- Dovanos užsienyje (249)
+|   |   |-- Pramogos Latvijoje (476)
+|   |   \-- Dovanos užsienyje (249)
+|   |-- Poilsis užsienyje (469)
+|   |   |-- Poilsis Latvijoje (473)
+|   |   |-- Poilsis Estijoje (477)
+|   |   |-- Poilsis Lenkijoje (478)
+|   |   |-- Kitos šalys (488)
+|   |   \-- Poilsis užsienyje (469)
 |   \-- Unknown
 |-- Culture & Creative
 |   |-- Kūrybiškos, linksmos (304)
@@ -176,5 +185,15 @@ GD Categories
 |-- Retail & Subscriptions
 |   |-- Žurnalų prenumerata (442)
 |   |   \-- Žurnalų prenumerata (442)
+|   |-- Žurnalų ir leidinių prenumerata (378)
+|   |   \-- Žurnalų ir leidinių prenumerata (378)
+|   |-- Dovanų rinkiniai (375)
+|   |   \-- Dovanų rinkiniai (375)
+|   |-- Parduotuvių dovanų čekiai (376)
+|   |   \-- Parduotuvių dovanų čekiai (376)
+|   |-- Prekybos centrų dovanų kortelės (377)
+|   |   \-- Prekybos centrų dovanų kortelės (377)
+|   |-- Gerumo dovanos (452)
+|   |   \-- Gerumo dovanos (452)
 |   \-- Unknown
 \-- Unknown
