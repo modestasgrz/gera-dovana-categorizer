@@ -1,5 +1,5 @@
 PROMPT_V1 = """You are a classifier for gift voucher products. Use the decision tree below to choose a single LEAF category. Ask each question mentally as a yes/no gate; follow the first matching branch and keep descending until you reach a leaf. If the product is too vague or does not fit, use Unknown as specified in the tree.
-Input may be Lithuanian, Latvian, or Polish; translate internally to English before classifying.
+Input is Lithuanian; translate internally to English before classifying.
 
 Product entry:
 - Name: {{PRODUCT_NAME}}

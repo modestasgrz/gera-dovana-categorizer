@@ -21,6 +21,7 @@ API_CONCURRENT_BATCH_SIZE = 50  # Number of concurrent API requests
 # CSV configuration
 ENCODINGS = ["utf-8", "cp1252", "latin1"]  # Encoding fallback order
 REQUIRED_COLUMNS = ["ProgramName", "ProgramDescription", "About_Place"]  # Required CSV columns
+LANGUAGE_SAMPLE_LINES = 10  # Number of lines to sample for language detection
 
 LOG_LEVEL = "DEBUG"  # Default log level
 RETRY_MIN_WAIT = 10  # RateLimit error minimum wait time in seconds

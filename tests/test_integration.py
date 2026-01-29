@@ -43,12 +43,14 @@ async def test_integration_processes_sample_csv(tmp_path: Path) -> None:
         _client: AsyncMock,
         products: list[ProductInput],
         _model: str,
+        _language: str,
         _rate_limit_callback: object = None,
     ) -> list[CategoryOutput]:
         return [CategoryOutput(category="spa_wellness", comment="") for _ in products]
 
     with (
         patch("src.core.AsyncOpenAI", return_value=mock_client),
+        patch("src.core.detect_language_async", return_value="lt"),
         patch("src.core.categorize_batch_async", side_effect=fake_categorize_batch_async),
     ):
         output_path, summary = await process_csv_async(input_path)
@@ -66,7 +68,13 @@ async def test_integration_processes_sample_csv(tmp_path: Path) -> None:
         output_columns = list(output_reader.fieldnames or [])
         output_rows = list(output_reader)
 
-    assert output_columns == [*input_columns, "category_id", "category_url", "comment"]
+    assert output_columns == [
+        *input_columns,
+        "category_id",
+        "category_url",
+        "category_name",
+        "comment",
+    ]
     assert len(output_rows) == len(input_rows)
     assert summary["total"] == len(input_rows)
     assert summary["categorized"] == len(input_rows)
@@ -103,6 +111,7 @@ async def test_integration_chunked_processing(tmp_path: Path) -> None:
         _client: AsyncMock,
         products: list[ProductInput],
         _model: str,
+        _language: str,
         _rate_limit_callback: object = None,
     ) -> list[CategoryOutput]:
         batch_sizes.append(len(products))
@@ -110,6 +119,7 @@ async def test_integration_chunked_processing(tmp_path: Path) -> None:
 
     with (
         patch("src.core.AsyncOpenAI", return_value=mock_client),
+        patch("src.core.detect_language_async", return_value="lt"),
         patch("src.core.categorize_batch_async", side_effect=fake_categorize_batch_async),
     ):
         output_path, summary = await process_csv_async(input_path)
@@ -157,12 +167,14 @@ async def test_integration_network_error_marks_unknown(tmp_path: Path) -> None:
         _client: AsyncMock,
         products: list[ProductInput],
         _model: str,
+        _language: str,
         _rate_limit_callback: object = None,
     ) -> list[CategoryOutput]:
         return [CategoryOutput(category="unknown", comment="Network error") for _ in products]
 
     with (
         patch("src.core.AsyncOpenAI", return_value=mock_client),
+        patch("src.core.detect_language_async", return_value="lt"),
         patch("src.core.categorize_batch_async", side_effect=fake_categorize_batch_async),
     ):
         output_path, summary = await process_csv_async(input_path)
@@ -178,3 +190,42 @@ async def test_integration_network_error_marks_unknown(tmp_path: Path) -> None:
 
     assert all(row["category_id"] == "unknown" for row in rows)
     assert all(row["category_url"] == "" for row in rows)  # Unknown has empty URL
+
+
+@pytest.mark.asyncio
+@pytest.mark.integration
+async def test_integration_unknown_language_defaults_to_lithuanian(tmp_path: Path) -> None:
+    """Test that unknown language detection defaults to Lithuanian."""
+    input_path = tmp_path / "test.csv"
+    input_path.write_text(
+        "ProgramName,ProgramDescription,About_Place\nTest,Test,Test",
+        encoding="utf-8",
+    )
+
+    mock_client = AsyncMock()
+
+    async def fake_categorize_batch_async(
+        _client: AsyncMock,
+        products: list[ProductInput],
+        _model: str,
+        language: str,
+        _rate_limit_callback: object = None,
+    ) -> list[CategoryOutput]:
+        # Verify that language is "lt" even though detection returned unknown
+        assert language == "lt"
+        return [CategoryOutput(category="292", comment="Chosen 292 (0.80)") for _ in products]
+
+    with (
+        patch("src.core.AsyncOpenAI", return_value=mock_client),
+        patch("src.core.detect_language_async", return_value="unknown"),
+        patch("src.core.categorize_batch_async", side_effect=fake_categorize_batch_async),
+    ):
+        output_path, _ = await process_csv_async(input_path)
+
+    # Verify the output includes language note
+    with output_path.open(encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+
+    assert len(rows) == 1
+    assert "; Language unidentified, defaulted to Lithuanian." in rows[0]["comment"]

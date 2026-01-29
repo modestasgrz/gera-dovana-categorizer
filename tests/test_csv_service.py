@@ -5,6 +5,7 @@ from pathlib import Path
 
 from src.config import REQUIRED_COLUMNS
 from src.csv_service import (
+    build_language_sample,
     detect_encoding,
     extract_product_input,
     read_csv_chunk,
@@ -175,3 +176,20 @@ def test_write_csv_chunk_append(tmp_path: Path) -> None:
         result_rows = list(reader)
 
     assert len(result_rows) == 2
+
+
+def test_build_language_sample(tmp_path: Path) -> None:
+    """Test building language sample from CSV."""
+    test_file = tmp_path / "test.csv"
+    content = """ProgramName,ProgramDescription,About_Place
+SPA dovana,Atsipalaidavimas ir masažai,Vilnius
+Vakarienė restorane,Skanus maistas,Kaunas
+Nuotykių parkas,Aktyvus poilsis,Klaipėda"""
+    test_file.write_text(content, encoding="utf-8")
+
+    sample = build_language_sample(test_file, "utf-8")
+
+    assert "SPA dovana" in sample
+    assert "Atsipalaidavimas ir masažai" in sample
+    assert "Vilnius" in sample
+    assert "|" in sample

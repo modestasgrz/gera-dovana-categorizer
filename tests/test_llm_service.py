@@ -10,6 +10,7 @@ from src.llm_service import (
     ProductInput,
     categorize_batch_async,
     categorize_product_async,
+    detect_language_async,
 )
 
 
@@ -34,7 +35,7 @@ async def test_categorize_product_async_success() -> None:
         about_place="Vilnius",
     )
 
-    result = await categorize_product_async(mock_client, product, "gpt-5-nano")
+    result = await categorize_product_async(mock_client, product, "gpt-5-nano", "lt")
 
     assert isinstance(result, CategoryOutput)
     assert result.category == "SPA ir masažai (spa-ir-masazai)"
@@ -58,7 +59,7 @@ async def test_categorize_product_async_empty_response() -> None:
         about_place="Test",
     )
 
-    result = await categorize_product_async(mock_client, product, "gpt-5-nano")
+    result = await categorize_product_async(mock_client, product, "gpt-5-nano", "lt")
 
     assert isinstance(result, CategoryOutput)
     assert result.category == "unknown"
@@ -82,7 +83,7 @@ async def test_categorize_product_async_malformed_json() -> None:
         about_place="Test",
     )
 
-    result = await categorize_product_async(mock_client, product, "gpt-5-nano")
+    result = await categorize_product_async(mock_client, product, "gpt-5-nano", "lt")
 
     assert isinstance(result, CategoryOutput)
     assert result.category == "unknown"
@@ -121,7 +122,7 @@ async def test_categorize_product_async_rate_limit_retry() -> None:
         about_place="Test",
     )
 
-    result = await categorize_product_async(mock_client, product, "gpt-5-nano")
+    result = await categorize_product_async(mock_client, product, "gpt-5-nano", "lt")
 
     assert result.category == "Vandens pramogos (vandens-pramogos)"
     assert mock_client.chat.completions.create.call_count == 2
@@ -146,13 +147,13 @@ async def test_categorize_product_async_rate_limit_error() -> None:
     )
 
     # RateLimitError should be caught after exhausted retries and return CategoryOutput with unknown
-    result = await categorize_product_async(mock_client, product, "gpt-5-nano")
+    result = await categorize_product_async(mock_client, product, "gpt-5-nano", "lt")
 
     assert isinstance(result, CategoryOutput)
     assert result.category == "unknown"
     assert "Rate limit exceeded" in result.comment
 
-    # Should have called 6 times as per stop_after_attempt(6)
+    # Should have called 6 times as per RETRY_MAX_ATTEMPTS (set in conftest.py)
     assert mock_client.chat.completions.create.call_count == 6
 
 
@@ -175,7 +176,7 @@ async def test_categorize_product_async_api_error() -> None:
     )
 
     # APIError should be caught and return CategoryOutput with unknown
-    result = await categorize_product_async(mock_client, product, "gpt-5-nano")
+    result = await categorize_product_async(mock_client, product, "gpt-5-nano", "lt")
 
     assert isinstance(result, CategoryOutput)
     assert result.category == "unknown"
@@ -194,7 +195,7 @@ async def test_categorize_product_async_unexpected_error() -> None:
         about_place="Test",
     )
 
-    result = await categorize_product_async(mock_client, product, "gpt-5-nano")
+    result = await categorize_product_async(mock_client, product, "gpt-5-nano", "lt")
 
     assert isinstance(result, CategoryOutput)
     assert result.category == "unknown"
@@ -244,7 +245,7 @@ async def test_categorize_batch_async_success() -> None:
         ),
     ]
 
-    results = await categorize_batch_async(mock_client, products, "gpt-5-nano")
+    results = await categorize_batch_async(mock_client, products, "gpt-5-nano", "lt")
 
     # Wrap in gather check since gather return values might be wrapped
     assert len(results) == 3
@@ -295,7 +296,7 @@ async def test_categorize_batch_async_with_exceptions() -> None:
         ),
     ]
 
-    results = await categorize_batch_async(mock_client, products, "gpt-5-nano")
+    results = await categorize_batch_async(mock_client, products, "gpt-5-nano", "lt")
 
     assert len(results) == 3
     assert isinstance(results[0], CategoryOutput)
@@ -312,7 +313,94 @@ async def test_categorize_batch_async_empty_list() -> None:
     """Test batch categorization with empty product list."""
     mock_client = AsyncMock()
 
-    results = await categorize_batch_async(mock_client, [], "gpt-5-nano")
+    results = await categorize_batch_async(mock_client, [], "gpt-5-nano", "lt")
 
     assert len(results) == 0
     mock_client.chat.completions.create.assert_not_called()
+
+
+@pytest.mark.asyncio
+async def test_detect_language_async_lithuanian() -> None:
+    """Test language detection returns Lithuanian."""
+    mock_client = AsyncMock()
+    mock_response = Mock()
+    mock_response.choices = [Mock()]
+    mock_response.choices[0].message.content = json.dumps({"language": "lt"})
+
+    mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
+
+    result = await detect_language_async(mock_client, "SPA dovana Vilniuje", "gpt-5-nano")
+
+    assert result == "lt"
+    mock_client.chat.completions.create.assert_called_once()
+
+
+@pytest.mark.asyncio
+async def test_detect_language_async_latvian() -> None:
+    """Test language detection returns Latvian."""
+    mock_client = AsyncMock()
+    mock_response = Mock()
+    mock_response.choices = [Mock()]
+    mock_response.choices[0].message.content = json.dumps({"language": "lv"})
+
+    mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
+
+    result = await detect_language_async(mock_client, "SPA dāvana Rīgā", "gpt-5-nano")
+
+    assert result == "lv"
+
+
+@pytest.mark.asyncio
+async def test_detect_language_async_polish() -> None:
+    """Test language detection returns Polish."""
+    mock_client = AsyncMock()
+    mock_response = Mock()
+    mock_response.choices = [Mock()]
+    mock_response.choices[0].message.content = json.dumps({"language": "pl"})
+
+    mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
+
+    result = await detect_language_async(mock_client, "Prezent SPA w Warszawie", "gpt-5-nano")
+
+    assert result == "pl"
+
+
+@pytest.mark.asyncio
+async def test_detect_language_async_unknown() -> None:
+    """Test language detection returns unknown for unrecognized language."""
+    mock_client = AsyncMock()
+    mock_response = Mock()
+    mock_response.choices = [Mock()]
+    mock_response.choices[0].message.content = json.dumps({"language": "unknown"})
+
+    mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
+
+    result = await detect_language_async(mock_client, "???", "gpt-5-nano")
+
+    assert result == "unknown"
+
+
+@pytest.mark.asyncio
+async def test_detect_language_async_invalid_code() -> None:
+    """Test language detection handles invalid language codes."""
+    mock_client = AsyncMock()
+    mock_response = Mock()
+    mock_response.choices = [Mock()]
+    mock_response.choices[0].message.content = json.dumps({"language": "invalid"})
+
+    mock_client.chat.completions.create = AsyncMock(return_value=mock_response)
+
+    result = await detect_language_async(mock_client, "test", "gpt-5-nano")
+
+    assert result == "unknown"
+
+
+@pytest.mark.asyncio
+async def test_detect_language_async_error() -> None:
+    """Test language detection handles errors gracefully."""
+    mock_client = AsyncMock()
+    mock_client.chat.completions.create = AsyncMock(side_effect=ValueError("API error"))
+
+    result = await detect_language_async(mock_client, "test", "gpt-5-nano")
+
+    assert result == "unknown"

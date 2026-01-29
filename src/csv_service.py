@@ -6,7 +6,7 @@ from pathlib import Path
 
 from loguru import logger
 
-from src.config import ENCODINGS, REQUIRED_COLUMNS
+from src.config import ENCODINGS, LANGUAGE_SAMPLE_LINES, REQUIRED_COLUMNS
 from src.llm_service import ProductInput
 
 
@@ -101,6 +101,26 @@ def extract_product_input(row: dict[str, str]) -> ProductInput:
         program_description=row.get("ProgramDescription", ""),
         about_place=row.get("About_Place", ""),
     )
+
+
+def build_language_sample(file_path: Path, encoding: str) -> str:
+    """Build text sample from first N rows for language detection.
+
+    Args:
+        file_path: Path to CSV file
+        encoding: File encoding
+
+    Returns:
+        Combined sample text from first N rows
+    """
+    rows = read_csv_chunk(file_path, offset=0, limit=LANGUAGE_SAMPLE_LINES, encoding=encoding)
+    samples = []
+    for row in rows:
+        product = extract_product_input(row)
+        # Combine name, description, and place with spaces
+        sample_text = f"{product.program_name} {product.program_description} {product.about_place}"
+        samples.append(sample_text.strip())
+    return " | ".join(samples)
 
 
 def write_csv_chunk(
