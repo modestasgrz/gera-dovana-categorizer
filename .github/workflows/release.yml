@@ -1,0 +1,135 @@
+name: Build and Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g., v1.0.0)'
+        required: true
+        type: string
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        shell: pwsh
+        run: |
+          irm https://astral.sh/uv/install.ps1 | iex
+          $uvPath = "$env:USERPROFILE\.local\bin"
+          $env:Path = "$env:Path;$uvPath"
+          $uvPath | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+          uv --version
+      - name: Build Windows
+        run: .\build.bat
+      - name: Create ZIP archive
+        shell: pwsh
+        run: |
+          Compress-Archive -Path dist\GiftVoucherCategorizer\* -DestinationPath GiftVoucherCategorizer-windows.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-build
+          path: GiftVoucherCategorizer-windows.zip
+
+  build-macos-arm64:
+    runs-on: macos-latest  # ARM64 (Apple Silicon)
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+      - name: Build ARM64
+        run: ./build.sh
+      - name: Verify architecture
+        run: |
+          file dist/GiftVoucherCategorizer.app/Contents/MacOS/GiftVoucherCategorizer
+      - name: Create ZIP archive
+        run: |
+          cd dist
+          zip -r ../GiftVoucherCategorizer-macos-arm64.zip GiftVoucherCategorizer.app
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos-arm64-build
+          path: GiftVoucherCategorizer-macos-arm64.zip
+
+  build-macos-intel:
+    runs-on: macos-13  # Intel (x86_64)
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+      - name: Build Intel
+        run: ./build.sh
+      - name: Verify architecture
+        run: |
+          file dist/GiftVoucherCategorizer.app/Contents/MacOS/GiftVoucherCategorizer
+      - name: Create ZIP archive
+        run: |
+          cd dist
+          zip -r ../GiftVoucherCategorizer-macos-intel.zip GiftVoucherCategorizer.app
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos-intel-build
+          path: GiftVoucherCategorizer-macos-intel.zip
+
+  create-release:
+    needs: [build-windows, build-macos-arm64, build-macos-intel]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ inputs.version }}
+          name: Release ${{ inputs.version }}
+          draft: false
+          prerelease: false
+          files: |
+            artifacts/windows-build/GiftVoucherCategorizer-windows.zip
+            artifacts/macos-arm64-build/GiftVoucherCategorizer-macos-arm64.zip
+            artifacts/macos-intel-build/GiftVoucherCategorizer-macos-intel.zip
+          body: |
+            ## Gift Voucher Categorizer ${{ inputs.version }}
+
+            ### Downloads
+
+            **Windows:**
+            - `GiftVoucherCategorizer-windows.zip` - Extract and run `GiftVoucherCategorizer.exe`
+
+            **macOS:**
+            - `GiftVoucherCategorizer-macos-arm64.zip` - For Apple Silicon
+            - `GiftVoucherCategorizer-macos-intel.zip` - For Intel Macs
+
+            ### Installation
+
+            1. Download the appropriate file for your platform
+            2. Extract the ZIP file
+            3. Run the application
+            4. Enter your OpenAI API key when prompted
+            5. Select a CSV file to categorize
+
+            ### Notes
+
+            - **macOS users:** You may need to right-click → Open the first time due to Gatekeeper
+            - **Windows users:** Windows Defender may show a warning - click "More info" → "Run anyway"

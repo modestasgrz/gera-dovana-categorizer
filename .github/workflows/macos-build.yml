@@ -1,0 +1,47 @@
+name: macOS Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-arm64:
+    runs-on: macos-latest  # ARM64 (Apple Silicon)
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+      - name: Build ARM64
+        run: ./build.sh
+      - name: Verify architecture
+        run: |
+          file dist/GiftVoucherCategorizer.app/Contents/MacOS/GiftVoucherCategorizer
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GiftVoucherCategorizer-macos-arm64
+          path: dist/GiftVoucherCategorizer.app/**
+
+  build-intel:
+    runs-on: macos-13  # Intel (x86_64)
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+      - name: Build Intel
+        run: ./build.sh
+      - name: Verify architecture
+        run: |
+          file dist/GiftVoucherCategorizer.app/Contents/MacOS/GiftVoucherCategorizer
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GiftVoucherCategorizer-macos-intel
+          path: dist/GiftVoucherCategorizer.app/**
