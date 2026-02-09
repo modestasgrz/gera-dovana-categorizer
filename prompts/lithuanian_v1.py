@@ -20,125 +20,187 @@ Top level:
 1) Adventure, adrenaline, active leisure, sports, vehicles, outdoors? -> Adventure & Active
 2) Relaxation, wellness, beauty, cosmetics, SPA, health/medical? -> Relaxation, Beauty & Wellness
 3) Food, drink, dining, tasting, culinary? -> Food & Drink
-4) Travel, stays, accommodation, city passes? -> Stay & Travel
-5) Culture, creative, learning, arts, events, venues? -> Culture & Creative
-6) Retail, subscriptions, vouchers for goods, gift sets, charity gifts? -> Retail & Subscriptions
+4) Travel, stays, accommodation? -> Stay & Travel
+5) Culture, creative, learning, arts, events, entertainment? -> Culture & Creative
+6) Retail, gift sets, vouchers for goods, subscriptions? -> Retail & Subscriptions
 7) Otherwise -> Unknown
 
 Adventure & Active:
-A1) Air-based activity? -> 251
+A1) Air-based activity (flights, jumps)? -> check subcategories
     - Balloon flight? -> 252
     - Parachute jump? -> 253
-    - Paragliding? -> 254
+    - Paragliding flight? -> 254
     - Scenic airplane flight? -> 255
     - Glider flight? -> 256
     - Pilot lesson? -> 511
-    - Other air-based -> 251
-A2) Water-based activity? -> 257
+    - General air activities? -> 251
+A2) Water-based activity? -> check subcategories
     - Water park? -> 258
     - Fishing? -> 259
     - Boat or yacht ride? -> 260
     - Diving? -> 261
-    - Kayaking/canoeing? -> 262
+    - Kayaking? -> 262
     - Kitesurfing? -> 263
     - Wakeboarding? -> 264
-    - Paddleboarding? -> 499
+    - Paddleboarding/SUP? -> 499
     - Water trampolines? -> 501
     - Jet skis? -> 502
-    - Pools/saunas by water? -> 524
-    - Boats/water bikes? -> 525
+    - Pools and saunas (water context)? -> 524
+    - Boats and water bikes? -> 525
     - Flyboard? -> 526
-    - Other water-based -> 257
-A3) Active leisure, games, climbing, quests? -> 265
+    - Other water entertainment? -> 527
+    - Water bike? -> 699
+    - Aquapark? -> 700
+    - Kayak rental? -> 701
+    - General water activities? -> 257
+A3) Active recreation, sports, games? -> check subcategories
     - Shooting? -> 266
     - Horse riding? -> 267
     - Adventure park? -> 270
     - Bowling? -> 271
     - Games? -> 306
-    - Escape/logic rooms? -> 309
+    - Escape rooms? -> 309
     - Golf? -> 429
     - Hikes? -> 491
     - Paintball? -> 495
-    - VR? -> 496
+    - Virtual reality? -> 496
     - Airsoft? -> 500
     - Martial arts? -> 528
     - Climbing? -> 529
-    - Other active leisure -> 265
-A4) Cars, motors, driving, off-road? -> 268
+    - Sports club? -> 657
+    - Training sessions? -> 658
+    - Boxing? -> 659
+    - Karate? -> 660
+    - Judo? -> 661
+    - Aikido? -> 662
+    - Kickboxing? -> 663
+    - Ice arena/skating rink? -> 665
+    - Tennis? -> 666
+    - Padel? -> 667
+    - Table tennis? -> 668, 669
+    - Billiards games? -> 670
+    - Snooker? -> 671
+    - Billiards? -> 672
+    - Pool? -> 673
+    - Airsofts? -> 674
+    - Laser arena? -> 675
+    - Archery? -> 676
+    - Dance? -> 677
+    - Badminton? -> 678
+    - Trampoline park? -> 680
+    - Horse stable? -> 681
+    - Mini golf? -> 682
+    - Disc golf? -> 683
+    - Squash? -> 684
+    - Darts? -> 685
+    - Curling? -> 686
+    - General active recreation? -> 265
+A4) Cars, motors, driving, off-road? -> check subcategories
     - Karting? -> 269
     - Drift? -> 272
     - Buggy? -> 492
-    - ATV/quad? -> 493
+    - ATV/quad bikes? -> 493
     - Motorcycles? -> 494
     - Sports cars (non-super)? -> 518
     - Tanks? -> 519
     - Monster truck? -> 520
-    - Jeep/safari? -> 521
-    - Bikes/scooters? -> 522
+    - Jeep and safari? -> 521
+    - Bikes and scooters? -> 522
     - Driving lessons? -> 523
-    - Convertible ride? -> 559
-    - Other auto/moto -> 268
-A5) Supercars specifically? -> 439
+    - Convertible? -> 559
+    - Other services? -> 577
+    - Driving? -> 687
+    - Armored vehicle? -> 690
+    - Cross motorcycles? -> 691
+    - Off-road? -> 692
+    - Snow mobiles? -> 693
+    - General auto/moto? -> 268
+A5) Supercars specifically? -> check subcategories
     - Lamborghini? -> 445
     - Tesla? -> 446
     - Ferrari? -> 447
     - Porsche? -> 547
-    - Other supercar -> 439
-A6) Winter sports/snow? -> 315
+    - General supercars? -> 439
+A6) Winter sports and activities? -> check subcategories
     - Skiing? -> 316
-    - Other winter -> 315
-A7) Otherwise in this theme -> Unknown
+    - General winter activities? -> 315
+A7) Top active leisure (general)? -> 314
+A8) Otherwise in this theme -> Unknown
 
 Relaxation, Beauty & Wellness:
-R1) SPA or massages? -> 292
-    - Couples SPA/massage? -> 293
-    - Full-body massage? -> 294
+R1) Beauty treatments? -> check subcategories
+    - Face procedures? -> 274
+    - Hair procedures? -> 275
+    - Body procedures? -> 276
+    - Beauty packages? -> 277
+    - Manicure, pedicure? -> 278
+    - Men's procedures? -> 279
+    - Teeth whitening? -> 503
+    - Makeup? -> 539
+    - Beauty training? -> 540
+    - Beauty salon/studio? -> 694
+    - Mesotherapy? -> 695
+    - Face cleansing? -> 696
+    - Pressotherapy? -> 697
+    - Laser hair removal? -> 698
+    - General beauty? -> 273
+R2) SPA and massages? -> check subcategories
+    - SPA and massage for two? -> 293
+    - Full body massage? -> 294
     - Back massage? -> 295
-    - Massage package? -> 296
+    - Massage packages? -> 296
     - SPA procedures? -> 297
     - Massage for men? -> 298
     - Face massage? -> 421
     - Head massage? -> 432
-    - SPA/massage in Vilnius? -> 460
-    - SPA/massage in Kaunas? -> 461
+    - SPA and massage in Vilnius? -> 460
+    - SPA and massage in Kaunas? -> 461
     - Relaxing massage? -> 512
-    - Lymph drainage? -> 513
+    - Lymphatic drainage massage? -> 513
     - Thai massage? -> 514
     - Ayurvedic massage? -> 515
     - Pregnancy massage? -> 516
-    - лечебни/medical massage? -> 517
-    - Other SPA/massage -> 292
-R2) Beauty treatments/cosmetics? -> 273
-    - Face treatment? -> 274
-    - Hair treatment? -> 275
-    - Body treatment? -> 276
-    - Beauty комплекс? -> 277
-    - Manicure/pedicure? -> 278
-    - Men-only procedures? -> 279
-    - Teeth whitening? -> 503
-    - Makeup? -> 539
-    - Beauty training? -> 540
-    - Other beauty -> 273
-R3) Wellness/health routines or procedures? -> 311
-    - Yoga classes? -> 613
+    - Medical massage? -> 517
+    - Sports massage? -> 718
+    - Classic massage? -> 719
+    - Deep tissue massage? -> 720
+    - Swedish massage? -> 721
+    - Anti-cellulite massage? -> 722
+    - Foot massage? -> 724
+    - Massages general? -> 725
+    - Kobido? -> 726
+    - Oriental massages? -> 727
+    - Ayurvedic massage (specific)? -> 728
+    - Pressure point massage? -> 729
+    - Massage for two? -> 730
+    - Spa? -> 731
+    - Sauna? -> 732
+    - Floating? -> 733
+    - Day spa? -> 734
+    - Spa center? -> 735
+    - Hair spa? -> 736
+    - Spa hotel? -> 737
+    - General SPA and massage? -> 292
+R3) Health and wellness? -> check subcategories
     - Wellness procedures? -> 313
-    - Sport/yoga/meditation? -> 430
-    - Floating? -> 546
+    - Sports, yoga, and meditation? -> 430
+    - Floating (wellness)? -> 546
     - Oral hygiene? -> 573
-    - Blood/health tests? -> 575
+    - Blood and health tests? -> 575
     - Wellness programs? -> 581
-    - Other wellness -> 311
+    - Yoga classes and lessons? -> 613
+    - General wellness? -> 311
 R4) Otherwise in this theme -> Unknown
 
 Food & Drink:
-F1) Dining/tastings/culinary? -> 299
+F1) Restaurants and tastings? -> check subcategories
     - Dinner? -> 300
     - Food tasting? -> 302
-    - Cooking class? -> 303
+    - Culinary courses? -> 303
     - Breakfast? -> 448
     - World cuisines? -> 450
     - Food delivery? -> 485
-    - Drink tasting? -> 534
+    - Drink tastings? -> 534
     - Desserts? -> 535
     - Restaurant vouchers? -> 536
     - Coffee tasting? -> 568
@@ -146,81 +208,119 @@ F1) Dining/tastings/culinary? -> 299
     - Whiskey tasting? -> 570
     - Wine tasting? -> 571
     - Beer tasting? -> 572
-    - Other dining/tasting -> 299
+    - Restaurants? -> 642
+    - Japanese restaurant? -> 643
+    - Georgian restaurant? -> 644
+    - Family restaurant? -> 645
+    - Fine dining? -> 646
+    - Italian restaurant? -> 647
+    - Michelin restaurants? -> 648
+    - Sushi? -> 649
+    - Desserts (specific)? -> 650
+    - Food? -> 651
+    - Bar? -> 652
+    - Tastings general? -> 653
+    - Wine tasting (specific)? -> 655
+    - Tasting dinner? -> 656
+    - General restaurants and tastings? -> 299
 F2) Otherwise in this theme -> Unknown
 
 Stay & Travel:
-S1) Accommodation/stays? -> 280
-    - Manor/castle stay? -> 456
-    - Stay in Anykščiai? -> 465
-    - Stay by a lake? -> 489
-    - Stay by the sea? -> 490
-    - SPA stay? -> 497
-    - Family stay? -> 507
-    - Workcation? -> 549
-    - Sanatorium stay? -> 312
-    - Stay in Druskininkai? -> 281
-    - Stay in Birštonas? -> 282
-    - Stay in Trakai? -> 283
-    - Stay in Palanga? -> 284
-    - Stay in Vilnius? -> 285
-    - Stay in Kaunas? -> 286
+S1) Vacation in Lithuania? -> check subcategories
+    - Vacation in Druskininkai? -> 281
+    - Vacation in Birštonas? -> 282
+    - Vacation in Trakai? -> 283
+    - Vacation in Palanga? -> 284
+    - Vacation in Vilnius? -> 285
+    - Vacation in Kaunas? -> 286
     - 1 night? -> 287
     - 2 nights? -> 288
-    - 3+ nights? -> 289
-    - Stay for two? -> 290
-    - Stay for one? -> 291
-    - Other stay -> 280
-S2) Abroad gifts/experiences? -> 249
-    - Latvia experiences? -> 476
-    - Other abroad gifts -> 249
-S3) Abroad stays/relaxation? -> 469
-    - Stay in Latvia? -> 473
-    - Stay in Estonia? -> 477
-    - Stay in Poland? -> 478
+    - 3 and more nights? -> 289
+    - Vacation for two? -> 290
+    - Vacation for one? -> 291
+    - Sanatorium vacation? -> 312
+    - Vacation in manors and castles? -> 456
+    - Vacation in Anykščiai? -> 465
+    - Vacation by the lake? -> 489
+    - Vacation by the sea? -> 490
+    - SPA vacation? -> 497
+    - Family vacation? -> 507
+    - Workcation? -> 549
+    - Hotels? -> 622
+    - Farmstead? -> 623
+    - Manor? -> 624
+    - Weekend trip? -> 625
+    - Guest houses? -> 626
+    - Apartments? -> 627
+    - Homestead? -> 628
+    - Villa? -> 629
+    - Ranch? -> 630
+    - Summer house? -> 631
+    - Sanatoriums? -> 632
+    - Camping? -> 633
+    - Recreation site? -> 634
+    - Rural tourism homesteads? -> 635
+    - Cottages? -> 636
+    - Forest cottages? -> 637
+    - Cottages on water? -> 638
+    - Treehouse? -> 639
+    - Yurts? -> 640
+    - Glamping? -> 641
+    - General vacation in Lithuania? -> 280
+S2) Vacation abroad? -> check subcategories
+    - Vacation in Latvia? -> 473
+    - Vacation in Estonia? -> 477
+    - Vacation in Poland? -> 478
     - Other countries? -> 488
-    - Other abroad stays -> 469
-S4) City pass/card? -> 479
-    - City card (any)? -> 479
-S5) Otherwise in this theme -> Unknown
+    - General vacation abroad? -> 469
+S3) City cards? -> 479
+S4) Otherwise in this theme -> Unknown
 
 Culture & Creative:
-C1) Creative/fun gifts, media, venues, classes? -> 304
-    - Photoshoot? -> 305
-    - экскурсия? -> 307
-    - Lesson/class? -> 308
+C1) Creative, fun activities? -> check subcategories
+    - Photo sessions? -> 305
+    - Excursions? -> 307
+    - Lessons? -> 308
     - Cinema? -> 310
-    - Theater/phil? -> 436
-    - Online shopping voucher? -> 483
+    - Theaters and philharmonic? -> 436
+    - Online shopping? -> 483
     - Magazines? -> 484
-    - Remote training/seminars? -> 486
-    - Perfume/cosmetics creation? -> 532
-    - Dance/music lessons? -> 533
+    - Remote training and seminars? -> 486
+    - Perfume and cosmetics creation? -> 532
+    - Dance and music lessons? -> 533
     - Books? -> 537
     - Museums? -> 538
-    - Other creative/fun -> 304
-C2) Hands-on creative activities/workshops? -> 531
-    - Other creative activities -> 531
-C3) Arts or arts training? -> 530
-    - Other arts -> 530
-C4) Events or live performances? -> 468
-    - Other events -> 468
-C5) "Tamsa" experiences? -> 449
-    - Other tamsa -> 449
+    - General creative/fun? -> 304
+C2) Creative activities? -> 531
+C3) Events? -> 468
+C4) Courses? -> check subcategories
+    - Driving schools? -> 703
+    - Massage courses? -> 704
+    - Confectionery courses? -> 705
+    - Online courses? -> 706
+    - Education? -> 707
+    - Group training? -> 708
+    - Courses for adults? -> 709
+    - Creative workshops? -> 710
+    - Horse riding lesson? -> 711
+    - Dance lessons? -> 713
+    - Workshops? -> 714
+    - Candle making? -> 715
+    - Ceramics classes? -> 716
+    - General courses? -> 702
+C5) Darkness experiences? -> 449
 C6) Otherwise in this theme -> Unknown
 
 Retail & Subscriptions:
-RS1) Magazine subscription? -> 442
-    - Any magazine subscription -> 442
-RS2) Publication/periodical subscription (non-magazine)? -> 378
-    - Other publication subscription -> 378
-RS3) Gift sets? -> 375
-    - Other gift sets -> 375
-RS4) Store gift vouchers? -> 376
-    - Other store gift vouchers -> 376
-RS5) Shopping center gift cards? -> 377
-    - Other shopping center gift cards -> 377
-RS6) Charity/meaningful gifts? -> 452
-    - Other charity gifts -> 452
-RS7) Otherwise in this theme -> Unknown
+RS1) Gift sets? -> 375
+RS2) Store gift vouchers? -> 376
+RS3) Shopping center vouchers? -> 377
+RS4) Publication subscriptions? -> check subcategories
+    - Magazine subscription? -> 442
+    - General publications? -> 378
+RS5) Business gifts? -> 382
+RS6) Newest gifts? -> 374
+RS7) Luxury gifts? -> 443
+RS8) Other gifts? -> 371
+RS9) Otherwise in this theme -> Unknown
 """
