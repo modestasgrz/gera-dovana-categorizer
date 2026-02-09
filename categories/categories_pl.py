@@ -324,322 +324,322 @@ CATEGORY_NAME_MAP: dict[str, str] = {
 
 # Category ID to URL mapping
 CATEGORY_URL_MAP: dict[str, str] = {
-    "355": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "356": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "358": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "359": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "360": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "361": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "362": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "363": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "364": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "365": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "366": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "367": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "369": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "370": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "371": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "372": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "374": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "375": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "376": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "377": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "378": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "379": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "380": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "381": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "382": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "383": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "384": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "385": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "387": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "388": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "389": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "390": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "391": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "392": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "393": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "394": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "395": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "396": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "397": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "398": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "399": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "400": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "401": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "402": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "403": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "405": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "406": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "407": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "408": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "409": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "410": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "411": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "412": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "413": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "414": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "415": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "416": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "417": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "418": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "420": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "421": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "423": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "424": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "427": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "489": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "501": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "503": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "504": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "505": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "506": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "507": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "508": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "509": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "510": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "511": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "512": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "527": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "531": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "532": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "543": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "544": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "547": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "559": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "560": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "568": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "578": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "593": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "594": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "595": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "605": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "615": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "616": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "618": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "651": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "652": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "659": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "676": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "678": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "679": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "680": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "681": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "682": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "683": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "684": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "685": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "686": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "687": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "688": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "689": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "690": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "691": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "692": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "693": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "694": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "715": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "716": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "717": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "718": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "719": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "720": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "721": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "722": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "723": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "724": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "725": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "726": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "727": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "728": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "729": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "730": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "731": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "732": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "733": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "734": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "735": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "736": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "749": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "751": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "752": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "781": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "782": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "783": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "787": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "788": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "789": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "790": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "791": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "792": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "793": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "794": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "795": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "796": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "797": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "798": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "799": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "800": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "801": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "802": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "803": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "804": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "805": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "806": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "807": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "808": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "809": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "814": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "815": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "816": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "854": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "855": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "856": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "857": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "858": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "859": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "860": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "861": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "862": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "863": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "864": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "868": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "871": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "872": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "873": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "874": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "875": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "876": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "877": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "878": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "879": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "880": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "881": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "882": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "883": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "884": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "885": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "886": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "887": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "888": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "889": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "890": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "891": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "892": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "894": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "895": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "896": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "897": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "898": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "899": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "900": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "901": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "902": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "903": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "904": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "905": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "906": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "907": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "908": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "944": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "950": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "975": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "976": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "984": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "998": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "999": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1000": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1001": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1003": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1004": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1005": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1014": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1015": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1017": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1019": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1021": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1022": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1023": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1029": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1033": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1034": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1037": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1040": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1042": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1043": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1044": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1045": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1046": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1094": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1095": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1096": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1097": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1098": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1099": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1100": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1101": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1102": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1103": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1104": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1105": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1106": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1107": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1108": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1109": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1110": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1111": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1112": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1113": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1114": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1115": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1117": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1118": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1119": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1120": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1121": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1122": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1123": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1124": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1125": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1126": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1128": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1131": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1132": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1134": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1135": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1136": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1137": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1138": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1139": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1140": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1141": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1142": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1143": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1144": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1145": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1146": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1148": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1150": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1151": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1152": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1153": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1154": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1155": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1156": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1157": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1158": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1159": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1160": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1161": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1162": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1163": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1164": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1165": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1169": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1170": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1171": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1172": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1173": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1177": "https://www.geradovana.pl",  # TODO: Add specific URL
-    "1183": "https://www.geradovana.pl",  # TODO: Add specific URL
+    "355": "https://www.superprezenty.pl/loty",
+    "356": "https://www.superprezenty.pl/loty/lot-paralotnia",
+    "358": "https://www.superprezenty.pl/loty/loty-samolotem",
+    "359": "https://www.superprezenty.pl/loty/loty-szybowcem",
+    "360": "https://www.superprezenty.pl/loty/loty-helikopterem",
+    "361": "https://www.superprezenty.pl/loty/loty-balonem",
+    "362": "https://www.superprezenty.pl/loty/kurs-pilotazu",
+    "363": "https://www.superprezenty.pl/skoki/tunel-aerodynamiczny",
+    "364": "https://www.superprezenty.pl/skoki/skoki-spadochronowe",
+    "365": "https://www.superprezenty.pl/skoki/dream-jump",
+    "366": "https://www.superprezenty.pl/loty/loty-widokowe",
+    "367": "https://www.superprezenty.pl/jazda",
+    "369": "https://www.superprezenty.pl/jazda/off-road",
+    "370": "https://www.superprezenty.pl/jazda/gokarty",
+    "371": "https://www.superprezenty.pl/jazda/motocykle",
+    "372": "https://www.superprezenty.pl/jazda/quady",
+    "374": "https://www.superprezenty.pl/jazda/pojazdy-specjalne",
+    "375": "https://www.superprezenty.pl/jazda/nauka-jazdy/nauka-bezpiecznej-jazdy",
+    "376": "https://www.superprezenty.pl/sporty-wodne",
+    "377": "https://www.superprezenty.pl/sporty-wodne/flyboard",
+    "378": "https://www.superprezenty.pl/sporty-wodne/windsurfing",
+    "379": "https://www.superprezenty.pl/sporty-wodne/skutery-wodne",
+    "380": "https://www.superprezenty.pl/sporty-wodne/nurkowanie",
+    "381": "https://www.superprezenty.pl/sporty-wodne/jachty",
+    "382": "https://www.superprezenty.pl/sporty-wodne/kajaki",
+    "383": "https://www.superprezenty.pl/sporty-wodne/aquapark",
+    "384": "https://www.superprezenty.pl/sporty-wodne/zeglarstwo",
+    "385": "https://www.superprezenty.pl/sporty-wodne/wakeboarding",
+    "387": "https://www.superprezenty.pl/zdrowie-i-relaks",
+    "388": "https://www.superprezenty.pl/masaze",
+    "389": "https://www.superprezenty.pl/uroda/zabiegi-na-cialo",
+    "390": "https://www.superprezenty.pl/uroda/zabiegi-na-twarz",
+    "391": "https://www.superprezenty.pl/uroda/manicure",
+    "392": "https://www.superprezenty.pl/zdrowie-i-relaks/spa-i-wellness",
+    "393": "https://www.superprezenty.pl/aktywny-wypoczynek/silownia",
+    "394": "https://www.superprezenty.pl/zdrowie-i-relaks/grota-solna",
+    "395": "https://www.superprezenty.pl/uroda/metamorfozy",
+    "396": "https://www.superprezenty.pl/kulinaria",
+    "397": "https://www.superprezenty.pl/kulinaria/degustacje/degustacja-wina",
+    "398": "https://www.superprezenty.pl/kulinaria/warsztatow-kulinarnych",
+    "399": "https://www.superprezenty.pl/kultura-i-rozrywka/teatry",
+    "400": "https://www.superprezenty.pl/strzelectwo",
+    "401": "https://www.superprezenty.pl/strzelectwo/strzelnica",
+    "402": "https://www.superprezenty.pl/strzelectwo/paintball",
+    "403": "https://www.superprezenty.pl/strzelectwo/paintball-laserowy",
+    "405": "https://www.superprezenty.pl/nauka-i-zabawa/sesja-fotograficzna",
+    "406": "https://www.superprezenty.pl/nauka-i-zabawa/kurs-fotografii",
+    "407": "https://www.superprezenty.pl/kultura-i-rozrywka",
+    "408": "https://www.superprezenty.pl/aktywny-wypoczynek/jazda-konna",
+    "409": "https://www.superprezenty.pl/aktywny-wypoczynek/wspinaczka",
+    "410": "https://www.superprezenty.pl/nauka-i-zabawa/nauka-tanca",
+    "411": "https://www.superprezenty.pl/aktywny-wypoczynek/tenis",
+    "412": "https://www.superprezenty.pl/blisko-natury/survival",
+    "413": "https://www.superprezenty.pl/aktywny-wypoczynek/golf",
+    "414": "https://www.superprezenty.pl/podroze",
+    "415": "https://www.superprezenty.pl/podroze/mazury",
+    "416": "https://www.superprezenty.pl/podroze/gory",
+    "417": "https://www.superprezenty.pl/podroze/morze",
+    "418": "https://www.superprezenty.pl/podroze/weekend-w-miescie",
+    "420": "https://www.superprezenty.pl/podroze/pobyt-w-spa",
+    "421": "https://www.superprezenty.pl/nauka-i-zabawa",
+    "423": "https://www.superprezenty.pl/nauka-i-zabawa/warsztaty-artystyczne",
+    "424": "https://www.superprezenty.pl/nauka-i-zabawa/kursy-pilotazu",
+    "427": "https://www.superprezenty.pl/nauka-i-zabawa/kursy-kompetencyjne",
+    "489": "https://www.superprezenty.pl/zestawy-podarunkowe",
+    "501": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody",
+    "503": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-poznan",
+    "504": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-kartingowy-poznan",
+    "505": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-jastrzab-k-radomia",
+    "506": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-ulez",
+    "507": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-kamien-slaski",
+    "508": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-nowe-miasto-nad-pilica",
+    "509": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-warszawa-bemowo",
+    "510": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-piaseczno-k-warszawy",
+    "511": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-pruszcz-gdanski",
+    "512": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-wroclaw-rakietowa",
+    "527": "https://www.superprezenty.pl/kultura-i-rozrywka/escape-room",
+    "531": "https://www.superprezenty.pl/skoki",
+    "532": "https://www.superprezenty.pl/skoki/skoki-bungee",
+    "543": "https://www.superprezenty.pl/jazda/drifting",
+    "544": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/pojedynki-samochodow",
+    "547": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/tory/tor-borsk",
+    "559": "https://www.superprezenty.pl/jazda/samochody-rajdowe",
+    "560": "https://www.superprezenty.pl/jazda/samochody-sportowe",
+    "568": "https://www.superprezenty.pl/jazda/pojazdy-militarne",
+    "578": "https://www.superprezenty.pl/kultura-i-rozrywka/park-rozrywki",
+    "593": "https://www.superprezenty.pl/kulinaria/romantyczna-kolacja",
+    "594": "https://www.superprezenty.pl/kulinaria/desery-i-slodkosci",
+    "595": "https://www.superprezenty.pl/kulinaria/kawa-i-herbata",
+    "605": "https://www.superprezenty.pl/kultura-i-rozrywka/wirtualna-rzeczywistosc",
+    "615": "https://www.superprezenty.pl/aktywny-wypoczynek/sporty-zimowe",
+    "616": "https://www.superprezenty.pl/ekskluzywne-prezenty",
+    "618": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/jazda-po-miescie",
+    "651": "https://www.superprezenty.pl/sporty-wodne/rafting",
+    "652": "https://www.superprezenty.pl/sporty-ekstremalne",
+    "659": "https://www.superprezenty.pl/spa/floating",
+    "676": "https://www.superprezenty.pl/zdrowie-i-relaks/uslugi-medyczne",
+    "678": "https://www.superprezenty.pl/kulinaria/kurs-baristy",
+    "679": "https://www.superprezenty.pl/kulinaria/kurs-na-barmana",
+    "680": "https://www.superprezenty.pl/kultura-i-rozrywka/bilard",
+    "681": "https://www.superprezenty.pl/kultura-i-rozrywka/kregle",
+    "682": "https://www.superprezenty.pl/podroze/pobyt-w-sanatorium",
+    "683": "https://www.superprezenty.pl/podroze/weekend-w-spa",
+    "684": "https://www.superprezenty.pl/podroze/wycieczki-weekendowe",
+    "685": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/jazda-lamborghini",
+    "686": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/jazda-ferrari",
+    "687": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/jazda-4x4",
+    "688": "https://www.superprezenty.pl/spa/termy",
+    "689": "https://www.superprezenty.pl/sporty-wodne/kitesurfing",
+    "690": "https://www.superprezenty.pl/sporty-wodne/motorowki",
+    "691": "https://www.superprezenty.pl/sporty-wodne/rejs-statkiem",
+    "692": "https://www.superprezenty.pl/sporty-wodne/kursy-zeglarskie",
+    "693": "https://www.superprezenty.pl/sporty-wodne/kurs-motorowodny",
+    "694": "https://www.superprezenty.pl/strzelectwo/rzucanie-siekierami",
+    "715": "https://www.superprezenty.pl/uroda/makijaz-i-wizaz",
+    "716": "https://www.superprezenty.pl/uroda/zabiegi-kosmetyczne",
+    "717": "https://www.superprezenty.pl/uroda/pedicure",
+    "718": "https://www.superprezenty.pl/kulinaria/kolacja-dla-dwojga",
+    "719": "https://www.superprezenty.pl/kulinaria/restauracja-w-ciemnosci",
+    "720": "https://www.superprezenty.pl/kulinaria/degustacje/degustacja-whisky",
+    "721": "https://www.superprezenty.pl/kulinaria/degustacje/degustacja-piwa",
+    "722": "https://www.superprezenty.pl/kultura-i-rozrywka/kino",
+    "723": "https://www.superprezenty.pl/nauka-i-zabawa/kursy-jezykowe",
+    "724": "https://www.superprezenty.pl/kultura-i-rozrywka/warsztaty-muzyczne",
+    "725": "https://www.superprezenty.pl/uroda",
+    "726": "https://www.superprezenty.pl/blisko-natury",
+    "727": "https://www.superprezenty.pl/blisko-natury/zwierzeta",
+    "728": "https://www.superprezenty.pl/blisko-natury/przyroda",
+    "729": "https://www.superprezenty.pl/aktywny-wypoczynek",
+    "730": "https://www.superprezenty.pl/aktywny-wypoczynek/park-trampolin",
+    "731": "https://www.superprezenty.pl/aktywny-wypoczynek/park-linowy",
+    "732": "https://www.superprezenty.pl/aktywny-wypoczynek/fitness",
+    "733": "https://www.superprezenty.pl/aktywny-wypoczynek/joga",
+    "734": "https://www.superprezenty.pl/aktywny-wypoczynek/squash",
+    "735": "https://www.superprezenty.pl/aktywny-wypoczynek/tyrolka",
+    "736": "https://www.superprezenty.pl/loty/lot-motolotnia",
+    "749": "https://www.superprezenty.pl/atrakcje-bez-wychodzenia-z-domu",
+    "751": "https://www.superprezenty.pl/atrakcje-bez-wychodzenia-z-domu/jedzenie-na-wynos",
+    "752": "https://www.superprezenty.pl/atrakcje-bez-wychodzenia-z-domu/kursy-i-warsztaty-online",
+    "781": "https://www.superprezenty.pl/podroze/wypoczynek-za-granica",
+    "782": "https://www.superprezenty.pl/podroze/wypoczynek-za-granica/wypoczynek-na-litwie",
+    "783": "https://www.superprezenty.pl/podroze/wypoczynek-za-granica/inne-kraje",
+    "787": "https://www.superprezenty.pl/masaze/masaz-tajski",
+    "788": "https://www.superprezenty.pl/masaze/masaz-banka-chinska",
+    "789": "https://www.superprezenty.pl/masaze/masaz-relaksacyjny",
+    "790": "https://www.superprezenty.pl/masaze/masaz-lomi-lomi",
+    "791": "https://www.superprezenty.pl/masaze/masaz-klasyczny",
+    "792": "https://www.superprezenty.pl/masaze/masaz-kamieniami",
+    "793": "https://www.superprezenty.pl/masaze/masaz-balijski",
+    "794": "https://www.superprezenty.pl/masaze/masaz-twarzy",
+    "795": "https://www.superprezenty.pl/masaze/masaz-stop",
+    "796": "https://www.superprezenty.pl/masaze/masaz-plecow",
+    "797": "https://www.superprezenty.pl/masaze/masaz-ajurwedyjski",
+    "798": "https://www.superprezenty.pl/masaze/masaz-leczniczy",
+    "799": "https://www.superprezenty.pl/masaze/masaz-orientalny",
+    "800": "https://www.superprezenty.pl/masaze/masaz-sportowy",
+    "801": "https://www.superprezenty.pl/masaze/masaz-glowy",
+    "802": "https://www.superprezenty.pl/masaze/masaz-dla-dwojga",
+    "803": "https://www.superprezenty.pl/masaze/masaz-czekolada",
+    "804": "https://www.superprezenty.pl/masaze/masaz-w-ciazy",
+    "805": "https://www.superprezenty.pl/masaze/masaz-calego-ciala",
+    "806": "https://www.superprezenty.pl/masaze/masaz-stemplami",
+    "807": "https://www.superprezenty.pl/masaze/masaz-miodem",
+    "808": "https://www.superprezenty.pl/masaze/masaz-aromaterapeutyczny",
+    "809": "https://www.superprezenty.pl/masaze/masaz-swieca",
+    "814": "https://www.superprezenty.pl/jazda/jazda-po-torze",
+    "815": "https://www.superprezenty.pl/jazda/nauka-jazdy/nauka-jazdy",
+    "816": "https://www.superprezenty.pl/jazda/szybkie-auta",
+    "854": "https://www.superprezenty.pl/strzelectwo/strzelnica/strzelanie-z-broni-palnej",
+    "855": "https://www.superprezenty.pl/strzelectwo/strzelnica/strzelanie-z-broni-palnej/strzelanie-z-karabinu",
+    "856": "https://www.superprezenty.pl/strzelectwo/strzelnica/strzelanie-z-broni-palnej/strzelanie-z-pistoletu",
+    "857": "https://www.superprezenty.pl/strzelectwo/strzelnica/strzelanie-z-broni-palnej/strzelanie-z-broni-historycznej",
+    "858": "https://www.superprezenty.pl/strzelectwo/strzelnica/nauka-strzelania",
+    "859": "https://www.superprezenty.pl/strzelectwo/strzelnica/strzelanie-dynamiczne",
+    "860": "https://www.superprezenty.pl/strzelectwo/strzelnica/strzelectwo-sportowe",
+    "861": "https://www.superprezenty.pl/strzelectwo/strzelanie-dla-dzieci",
+    "862": "https://www.superprezenty.pl/strzelectwo/strzelanie-dla-dwojga",
+    "863": "https://www.superprezenty.pl/strzelectwo/strzelanie-z-luku",
+    "864": "https://www.superprezenty.pl/strzelectwo/strzelnica/strzelanie-do-rzutkow",
+    "868": "https://www.superprezenty.pl/bony-podarunkowe-do-sklepow",
+    "871": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-bednary",
+    "872": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-poznan",
+    "873": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-poznan/tor-poznan-glowny",
+    "874": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-poznan/tor-poznan-kartingowy",
+    "875": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-bialystok",
+    "876": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-driveland",
+    "877": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-jastrzab",
+    "878": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-koszalin",
+    "879": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-krakow",
+    "880": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-krzywa",
+    "881": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-lodz",
+    "882": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-pszczolki",
+    "883": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-slomczyn",
+    "884": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-torun",
+    "885": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-ulez",
+    "886": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-silesia-ring",
+    "887": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-silesia-ring/tor-silesia-ring-glowny",
+    "888": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-silesia-ring/tor-silesia-ring-kartingowy",
+    "889": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-modlin",
+    "890": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-olsztyn",
+    "891": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-kielce",
+    "892": "https://www.superprezenty.pl/jazda/jazda-po-torze/tor-bemowo",
+    "894": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/wynajem-samochodow",
+    "895": "https://www.superprezenty.pl/jazda/motocykle/jazda-crossem",
+    "896": "https://www.superprezenty.pl/jazda/motocykle/jazda-skuterem",
+    "897": "https://www.superprezenty.pl/jazda/motocykle/szkolenie-motocyklowe",
+    "898": "https://www.superprezenty.pl/jazda/samochody-sportowe/jazda-fordem",
+    "899": "https://www.superprezenty.pl/jazda/samochody-sportowe/jazda-audi",
+    "900": "https://www.superprezenty.pl/jazda/samochody-sportowe/jazda-nissanem",
+    "901": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/jazda-bolidem",
+    "902": "https://www.superprezenty.pl/jazda/samochody-sportowe/jazda-bmw",
+    "903": "https://www.superprezenty.pl/jazda/samochody-sportowe/jazda-porsche",
+    "904": "https://www.superprezenty.pl/jazda/samochody-rajdowe/jazda-mitsubishi",
+    "905": "https://www.superprezenty.pl/jazda/monster-truck",
+    "906": "https://www.superprezenty.pl/jazda/jazda-czolgiem",
+    "907": "https://www.superprezenty.pl/jazda/samochody-sportowe/jazda-tesla",
+    "908": "https://www.superprezenty.pl/jazda/samochody-rajdowe/subaru-jazda",
+    "944": "https://www.superprezenty.pl/podroze/glamping",
+    "950": "https://www.superprezenty.pl/karty-podarunkowe-centrow-handlowych",
+    "975": "https://www.superprezenty.pl/loty/lot-awionetka",
+    "976": "https://www.superprezenty.pl/podroze/wycieczki-jednodniowe",
+    "984": "https://www.superprezenty.pl/kursy-kulinarne",
+    "998": "https://www.superprezenty.pl/miejskie-karty-podarunkowe",
+    "999": "https://www.superprezenty.pl/kultura-i-rozrywka/muzeum",
+    "1000": "https://www.superprezenty.pl/spa/sauna",
+    "1001": "https://www.superprezenty.pl/masaze/masaz-kobido",
+    "1003": "https://www.superprezenty.pl/aktywny-wypoczynek/sztuki-walki",
+    "1004": "https://www.superprezenty.pl/podroze/romantyczny-weekend-dla-dwojga-z-jacuzzi-w-pokoju",
+    "1005": "https://www.superprezenty.pl/zdrowie-i-relaks/tlenoterapia",
+    "1014": "https://www.superprezenty.pl/nauka-i-zabawa/nauka-spiewu",
+    "1015": "https://www.superprezenty.pl/stylizacja-wlosow",
+    "1017": "https://www.superprezenty.pl/skoki/skok-w-tandemie",
+    "1019": "https://www.superprezenty.pl/nauka-i-zabawa/nauka-rysunku",
+    "1021": "https://www.superprezenty.pl/podroze/pobyt-w-spa-z-zabiegami",
+    "1022": "https://www.superprezenty.pl/jazda/tor-motocyklowy",
+    "1023": "https://www.superprezenty.pl/podroze/weekend-w-spa-nad-morzem",
+    "1029": "https://www.superprezenty.pl/kultura-i-rozrywka/zakupy-ze-stylistka",
+    "1033": "https://www.superprezenty.pl/gokarty-krakow",
+    "1034": "https://www.superprezenty.pl/nauka-i-zabawa/nauka-gry-na-instrumentach",
+    "1037": "https://www.superprezenty.pl/jazda/quady/jazda-buggy",
+    "1040": "https://www.superprezenty.pl/jazda/motocykle/jazda-harleyem",
+    "1042": "https://www.superprezenty.pl/jazda/pojazdy-specjalne/jazda-ogorkiem",
+    "1043": "https://www.superprezenty.pl/jazda/pojazdy-specjalne/jazda-ciezarowka",
+    "1044": "https://www.superprezenty.pl/podroze/wypoczynek-za-granica/wlochy",
+    "1045": "https://www.superprezenty.pl/podroze/wypoczynek-za-granica/wegry",
+    "1046": "https://www.superprezenty.pl/podroze/wypoczynek-za-granica/norwegia",
+    "1094": "https://www.superprezenty.pl/spa",
+    "1095": "https://www.superprezenty.pl/spa/uzdrowisko",
+    "1096": "https://www.superprezenty.pl/spa/hammam",
+    "1097": "https://www.superprezenty.pl/spa/head-spa",
+    "1098": "https://www.superprezenty.pl/spa/spa-dla-dwojga",
+    "1099": "https://www.superprezenty.pl/spa/spa-hotel",
+    "1100": "https://www.superprezenty.pl/spa/spa-hotel/spa-resort",
+    "1101": "https://www.superprezenty.pl/spa/day-spa",
+    "1102": "https://www.superprezenty.pl/spa/spa-dla-kobiet",
+    "1103": "https://www.superprezenty.pl/spa/zabieg-spa",
+    "1104": "https://www.superprezenty.pl/spa/spa-dla-mezczyzn",
+    "1105": "https://www.superprezenty.pl/podroze/hotel",
+    "1106": "https://www.superprezenty.pl/podroze/zamek",
+    "1107": "https://www.superprezenty.pl/podroze/sanatorium",
+    "1108": "https://www.superprezenty.pl/podroze/nocleg-nad-morzem",
+    "1109": "https://www.superprezenty.pl/podroze/dwor",
+    "1110": "https://www.superprezenty.pl/podroze/domek-na-drzewie",
+    "1111": "https://www.superprezenty.pl/podroze/domki-w-gorach",
+    "1112": "https://www.superprezenty.pl/podroze/weekend-dla-dwojga",
+    "1113": "https://www.superprezenty.pl/podroze/willa",
+    "1114": "https://www.superprezenty.pl/podroze/pensjonat",
+    "1115": "https://www.superprezenty.pl/podroze/resort",
+    "1117": "https://www.superprezenty.pl/podroze/wakacje-w-polsce",
+    "1118": "https://www.superprezenty.pl/kulinaria/restauracje",
+    "1119": "https://www.superprezenty.pl/kulinaria/restauracje/restauracja-polska",
+    "1120": "https://www.superprezenty.pl/kulinaria/restauracje/restauracja-wegetarianska",
+    "1121": "https://www.superprezenty.pl/kulinaria/restauracje/restauracja-wloska",
+    "1122": "https://www.superprezenty.pl/kulinaria/restauracje/restauracja-rybna",
+    "1123": "https://www.superprezenty.pl/kulinaria/sushi",
+    "1124": "https://www.superprezenty.pl/kulinaria/karczma",
+    "1125": "https://www.superprezenty.pl/kulinaria/steakhouse",
+    "1126": "https://www.superprezenty.pl/kulinaria/winnica",
+    "1128": "https://www.superprezenty.pl/kulinaria/degustacje",
+    "1131": "https://www.superprezenty.pl/masaze/drenaz-limfatyczny",
+    "1132": "https://www.superprezenty.pl/masaze/refleksologia",
+    "1134": "https://www.superprezenty.pl/masaze/masaz-tkanek-glebokich",
+    "1135": "https://www.superprezenty.pl/masaze/masaz-goracymi-kamieniami",
+    "1136": "https://www.superprezenty.pl/masaze/masaz-shiatsu",
+    "1137": "https://www.superprezenty.pl/masaze/masaz-antycellulitowy",
+    "1138": "https://www.superprezenty.pl/masaze/masaz-karku",
+    "1139": "https://www.superprezenty.pl/masaze/masaz-dloni",
+    "1140": "https://www.superprezenty.pl/masaze/masaz-dla-kobiet-w-ciazy",
+    "1141": "https://www.superprezenty.pl/masaze/masaz-stemplami-ziolowymi",
+    "1142": "https://www.superprezenty.pl/aktywny-wypoczynek/golf/minigolf",
+    "1143": "https://www.superprezenty.pl/aktywny-wypoczynek/park-rozrywki",
+    "1144": "https://www.superprezenty.pl/aktywny-wypoczynek/scianka-wspinaczkowa",
+    "1145": "https://www.superprezenty.pl/aktywny-wypoczynek/pole-dance",
+    "1146": "https://www.superprezenty.pl/aktywny-wypoczynek/okulary-vr",
+    "1148": "https://www.superprezenty.pl/jazda/buggy",
+    "1150": "https://www.superprezenty.pl/jazda/nauka-jazdy",
+    "1151": "https://www.superprezenty.pl/jazda/samochody-sportowe/przejazdzka-lamborghini",
+    "1152": "https://www.superprezenty.pl/jazda/samochody-sportowe/przejazdzka-ferrari",
+    "1153": "https://www.superprezenty.pl/jazda/samochody-sportowe/supersamochody/jazda-po-torze-wyscigowym",
+    "1154": "https://www.superprezenty.pl/jazda/przejazdzka-porsche",
+    "1155": "https://www.superprezenty.pl/jazda/przejazdzka-czolgiem",
+    "1156": "https://www.superprezenty.pl/jazda/jazda-na-torze-wyscigowym",
+    "1157": "https://www.superprezenty.pl/jazda/nauka-jazdy/kurs-jazdy-ekstremalnej",
+    "1158": "https://www.superprezenty.pl/funcreative",
+    "1159": "https://www.superprezenty.pl/warsztaty",
+    "1160": "https://www.superprezenty.pl/warsztaty/warsztaty-dla-dzieci",
+    "1161": "https://www.superprezenty.pl/warsztaty/ciekawe-warsztaty-dla-doroslych",
+    "1162": "https://www.superprezenty.pl/szkolenie",
+    "1163": "https://www.superprezenty.pl/szkolenie/szkolenie-psow",
+    "1164": "https://www.superprezenty.pl/kursy",
+    "1165": "https://www.superprezenty.pl/kursy/kurs-makijazu",
+    "1169": "https://www.superprezenty.pl/sesja-zdjeciowa",
+    "1170": "https://www.superprezenty.pl/lekcja-tanca",
+    "1171": "https://www.superprezenty.pl/gra-miejska",
+    "1172": "https://www.superprezenty.pl/loty-i-skoki",
+    "1173": "https://www.superprezenty.pl/lot-motoparalotnia",
+    "1177": "https://www.superprezenty.pl/uroda/peelingi",
+    "1183": "https://www.superprezenty.pl/sporty-wodne/sup",
 }

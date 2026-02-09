@@ -375,373 +375,373 @@ CATEGORY_NAME_MAP: dict[str, str] = {
 
 # Category ID to URL mapping
 CATEGORY_URL_MAP: dict[str, str] = {
-    "174": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "175": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "177": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "179": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "181": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "183": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "185": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "187": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "189": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "191": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "193": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "195": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "196": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "197": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "198": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "199": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "200": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "202": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "203": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "204": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "205": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "206": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "207": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "208": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "209": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "210": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "211": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "212": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "213": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "214": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "215": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "216": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "217": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "218": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "219": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "220": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "221": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "222": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "223": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "224": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "225": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "226": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "227": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "228": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "229": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "230": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "231": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "232": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "233": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "234": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "235": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "236": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "237": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "238": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "239": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "240": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "241": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "242": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "243": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "244": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "245": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "246": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "247": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "248": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "249": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "251": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "252": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "253": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "254": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "255": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "256": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "257": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "258": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "259": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "260": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "261": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "263": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "264": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "265": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "266": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "267": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "268": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "269": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "270": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "271": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "272": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "273": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "274": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "330": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "331": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "332": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "353": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "354": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "355": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "356": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "362": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "364": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "365": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "366": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "367": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "369": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "374": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "375": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "376": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "377": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "378": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "379": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "381": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "383": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "385": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "390": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "391": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "393": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "404": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "408": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "411": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "412": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "413": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "414": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "419": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "420": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "421": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "422": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "423": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "424": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "426": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "428": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "429": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "431": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "432": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "433": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "434": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "435": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "436": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "437": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "438": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "439": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "440": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "441": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "442": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "443": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "444": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "445": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "446": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "447": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "448": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "449": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "450": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "451": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "452": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "453": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "454": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "456": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "457": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "458": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "459": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "460": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "461": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "462": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "463": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "464": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "465": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "466": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "467": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "468": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "469": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "470": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "471": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "472": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "473": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "474": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "475": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "476": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "477": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "478": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "479": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "480": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "481": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "482": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "483": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "484": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "485": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "486": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "488": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "489": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "490": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "491": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "492": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "493": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "495": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "496": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "497": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "498": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "499": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "500": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "501": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "502": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "503": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "504": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "505": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "506": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "507": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "508": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "509": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "510": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "511": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "515": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "516": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "517": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "518": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "519": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "520": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "521": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "522": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "523": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "525": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "529": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "532": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "536": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "537": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "538": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "539": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "540": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "542": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "543": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "548": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "554": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "555": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "556": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "557": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "558": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "559": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "560": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "561": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "563": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "564": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "565": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "566": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "568": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "574": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "575": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "576": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "577": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "578": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "579": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "580": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "581": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "582": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "583": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "584": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "585": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "586": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "587": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "588": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "589": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "592": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "593": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "594": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "595": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "596": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "597": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "598": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "599": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "600": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "612": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "613": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "614": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "615": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "617": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "618": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "619": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "620": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "621": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "622": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "623": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "624": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "631": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "632": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "633": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "634": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "635": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "636": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "637": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "638": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "639": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "640": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "641": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "642": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "643": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "644": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "645": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "650": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "651": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "652": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "653": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "654": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "655": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "656": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "658": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "659": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "660": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "661": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "662": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "663": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "665": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "666": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "667": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "668": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "669": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "670": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "671": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "672": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "673": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "675": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "676": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "677": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "679": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "680": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "681": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "682": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "684": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "685": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "686": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "687": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "709": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "712": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "713": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "714": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "715": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "716": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "717": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "718": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "719": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "720": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "721": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "722": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "723": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "724": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "725": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "726": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "727": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "728": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "729": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "730": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "731": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "732": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "733": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "734": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "735": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "736": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "737": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "738": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "739": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "740": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "741": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "744": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "756": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "757": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "759": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "760": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "765": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "766": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "767": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "768": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "770": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "771": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "780": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "781": "https://www.geradovana.lv",  # TODO: Add specific URL
-    "782": "https://www.geradovana.lv",  # TODO: Add specific URL
+    "174": "https://www.lieliskadavana.lv/vieta",
+    "175": "https://www.lieliskadavana.lv/davanas-riga",
+    "177": "https://www.lieliskadavana.lv/davanas-jurmala",
+    "179": "https://www.lieliskadavana.lv/davanas-adazos",
+    "181": "https://www.lieliskadavana.lv/davanas-ogre",
+    "183": "https://www.lieliskadavana.lv/davanas-jelgava",
+    "185": "https://www.lieliskadavana.lv/davanas-bauska",
+    "187": "https://www.lieliskadavana.lv/davanas-liepaja",
+    "189": "https://www.lieliskadavana.lv/davanas-valmiera",
+    "191": "https://www.lieliskadavana.lv/davanas-sigulda",
+    "193": "https://www.lieliskadavana.lv/davanas-daugavpili",
+    "195": "https://www.lieliskadavana.lv/davanas-rezekne",
+    "196": "https://www.lieliskadavana.lv/rezeknes-nov",
+    "197": "https://www.lieliskadavana.lv/davanas-citas-pilsetas",
+    "198": "https://www.lieliskadavana.lv/davanas-visa-latvija",
+    "199": "https://www.lieliskadavana.lv/davanas-lietuva",
+    "200": "https://www.lieliskadavana.lv/davanas-igaunija",
+    "202": "https://www.lieliskadavana.lv/lidojumi-un-lecieni",
+    "203": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/lidojumi-ar-gaisa-balonu",
+    "204": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/lecieni",
+    "205": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/lidojumi-ar-paraplanu",
+    "206": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/lidojums-ar-lidmasinu",
+    "207": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/lidojumi-ar-deltaplanu",
+    "208": "https://www.lieliskadavana.lv/aerodium-veja-tunelis",
+    "209": "https://www.lieliskadavana.lv/udens-piedzivojumi",
+    "210": "https://www.lieliskadavana.lv/udens-piedzivojumi/udens-atrakciju-parki",
+    "211": "https://www.lieliskadavana.lv/udens-piedzivojumi/brauciens-ar-kugi-vai-jahtu",
+    "212": "https://www.lieliskadavana.lv/udens-piedzivojumi/nirsana",
+    "213": "https://www.lieliskadavana.lv/udens-piedzivojumi/izbraucieni-ar-laivam",
+    "214": "https://www.lieliskadavana.lv/udens-piedzivojumi/kaitbords",
+    "215": "https://www.lieliskadavana.lv/udens-piedzivojumi/veikbords",
+    "216": "https://www.lieliskadavana.lv/udens-piedzivojumi/vindserfings",
+    "217": "https://www.lieliskadavana.lv/udens-piedzivojumi/citas-udens-izklaides",
+    "218": "https://www.lieliskadavana.lv/aktiva-atputa",
+    "219": "https://www.lieliskadavana.lv/aktiva-atputa/sausana",
+    "220": "https://www.lieliskadavana.lv/aktiva-atputa/izjades",
+    "221": "https://www.lieliskadavana.lv/izklaide-pie-stures",
+    "222": "https://www.lieliskadavana.lv/kursi-un-meistarklases/deju-nodarbibas",
+    "223": "https://www.lieliskadavana.lv/aktiva-atputa/piedzivojumu-parki",
+    "224": "https://www.lieliskadavana.lv/aktiva-atputa/boulings",
+    "225": "https://www.lieliskadavana.lv/skaistumkopsana",
+    "226": "https://www.lieliskadavana.lv/skaistumkopsana/sejas-proceduras",
+    "227": "https://www.lieliskadavana.lv/skaistumkopsana/proceduras-matiem",
+    "228": "https://www.lieliskadavana.lv/skaistumkopsana/proceduras-kermenim",
+    "229": "https://www.lieliskadavana.lv/skaistumkopsana/proceduru-kompleksi",
+    "230": "https://www.lieliskadavana.lv/skaistumkopsana/manikirs",
+    "231": "https://www.lieliskadavana.lv/skaistumkopsana/proceduras-viriesiem",
+    "232": "https://www.lieliskadavana.lv/kursi-un-meistarklases/vizazas-un-stila-kursi",
+    "233": "https://www.lieliskadavana.lv/naksnosana",
+    "234": "https://www.lieliskadavana.lv/naksnosana/naksnosana-riga",
+    "235": "https://www.lieliskadavana.lv/naksnosana/naksnosana-kurzeme",
+    "236": "https://www.lieliskadavana.lv/naksnosana/naksnosana-zemgale",
+    "237": "https://www.lieliskadavana.lv/naksnosana/naksnosana-vidzeme",
+    "238": "https://www.lieliskadavana.lv/naksnosana/naksnosana-latgale",
+    "239": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-lietuva",
+    "240": "https://www.lieliskadavana.lv/naksnosana/1-nakts",
+    "241": "https://www.lieliskadavana.lv/naksnosana/2-naktis",
+    "242": "https://www.lieliskadavana.lv/naksnosana/1-personai",
+    "243": "https://www.lieliskadavana.lv/naksnosana/2-personam",
+    "244": "https://www.lieliskadavana.lv/naksnosana/3-personam",
+    "245": "https://www.lieliskadavana.lv/naksnosana/vairak-ka-3-personam",
+    "246": "https://www.lieliskadavana.lv/spa-un-masazas",
+    "247": "https://www.lieliskadavana.lv/spa-un-masazas/spa-un-masaza-diviem",
+    "248": "https://www.lieliskadavana.lv/spa-un-masazas/masazas/pilna-kermena-masaza",
+    "249": "https://www.lieliskadavana.lv/spa-un-masazas/muguras-masaza",
+    "251": "https://www.lieliskadavana.lv/spa-un-masazas/spa/spa-proceduras",
+    "252": "https://www.lieliskadavana.lv/spa-un-masazas/masazas-viriesiem",
+    "253": "https://www.lieliskadavana.lv/davanas-gardeziem",
+    "254": "https://www.lieliskadavana.lv/davanas-gardeziem/vakarinas",
+    "255": "https://www.lieliskadavana.lv/davanas-gardeziem/degustacijas",
+    "256": "https://www.lieliskadavana.lv/kursi-un-meistarklases/kursi",
+    "257": "https://www.lieliskadavana.lv/jautras-davanas",
+    "258": "https://www.lieliskadavana.lv/jautras-davanas/fotosesija",
+    "259": "https://www.lieliskadavana.lv/jautras-davanas/ekskursijas",
+    "260": "https://www.lieliskadavana.lv/jautras-davanas/kvesti",
+    "261": "https://www.lieliskadavana.lv/jautras-davanas/kino",
+    "263": "https://www.lieliskadavana.lv/kursi-un-meistarklases",
+    "264": "https://www.lieliskadavana.lv/veselibai-un-labsajutai",
+    "265": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/spa-centri",
+    "266": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/baseini",
+    "267": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/kriosauna",
+    "268": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/solarijs",
+    "269": "https://www.lieliskadavana.lv/aktiva-atputa-ziema",
+    "270": "https://www.lieliskadavana.lv/aktiva-atputa-ziema/sleposana",
+    "271": "https://www.lieliskadavana.lv/aktiva-atputa-ziema/brauksana-ar-snovbordu",
+    "272": "https://www.lieliskadavana.lv/aktiva-atputa-ziema/izbraucieni-ar-sniega-motociklu",
+    "273": "https://www.lieliskadavana.lv/aktiva-atputa-ziema/slidosana",
+    "274": "https://www.lieliskadavana.lv/aktiva-atputa-ziema/brauciens-pajuga",
+    "330": "https://www.lieliskadavana.lv/davanu-komplekti",
+    "331": "https://www.lieliskadavana.lv/davanu-kartes-precei",
+    "332": "https://www.lieliskadavana.lv/jautras-davanas/preses-abonementi",
+    "353": "https://www.lieliskadavana.lv/davanas-vidzeme",
+    "354": "https://www.lieliskadavana.lv/davanas-kurzeme",
+    "355": "https://www.lieliskadavana.lv/davanas-zemgale",
+    "356": "https://www.lieliskadavana.lv/davanas-latgale",
+    "362": "https://www.lieliskadavana.lv/davanas-gardeziem/velas-brokastis",
+    "364": "https://www.lieliskadavana.lv/ventspils",
+    "365": "https://www.lieliskadavana.lv/lamborghini",
+    "366": "https://www.lieliskadavana.lv/bikernieku-trase",
+    "367": "https://www.lieliskadavana.lv/cesis",
+    "369": "https://www.lieliskadavana.lv/ligatne",
+    "374": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-lietuva/palanga",
+    "375": "https://www.lieliskadavana.lv/atputa-arzemes/igaunija",
+    "376": "https://www.lieliskadavana.lv/aizkraukle",
+    "377": "https://www.lieliskadavana.lv/izklaide-pie-stures/kartingi",
+    "378": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-lietuva/druskininki",
+    "379": "https://www.lieliskadavana.lv/izklaide-pie-stures/superauto",
+    "381": "https://www.lieliskadavana.lv/jekabpils",
+    "383": "https://www.lieliskadavana.lv/madona",
+    "385": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-lietuva/birstonas",
+    "390": "https://www.lieliskadavana.lv/tallina",
+    "391": "https://www.lieliskadavana.lv/pernava",
+    "393": "https://www.lieliskadavana.lv/davanas-tukuma",
+    "404": "https://www.lieliskadavana.lv/tirdzniecibas-centra-davanu-karte",
+    "408": "https://www.lieliskadavana.lv/smiltene",
+    "411": "https://www.lieliskadavana.lv/polija",
+    "412": "https://www.lieliskadavana.lv/austrija",
+    "413": "https://www.lieliskadavana.lv/ungarija",
+    "414": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-polija",
+    "419": "https://www.lieliskadavana.lv/izklaide-no-majam",
+    "420": "https://www.lieliskadavana.lv/izklaides-briva-daba",
+    "421": "https://www.lieliskadavana.lv/izklaide-no-majam/gramatas-un-zurnali",
+    "422": "https://www.lieliskadavana.lv/izklaide-no-majam/edieni-lidznemsanai",
+    "423": "https://www.lieliskadavana.lv/izklaide-no-majam/iepirksanas-tiessaite",
+    "424": "https://www.lieliskadavana.lv/izklaide-no-majam/tiessaites-seminari-un-apmacibas",
+    "426": "https://www.lieliskadavana.lv/atputa-arzemes",
+    "428": "https://www.lieliskadavana.lv/pilsetas-kartes",
+    "429": "https://www.lieliskadavana.lv/aktiva-atputa-ziema/bobsleja-trase",
+    "431": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/lidojums-ar-helikopteru",
+    "432": "https://www.lieliskadavana.lv/naksnosana/jurmala",
+    "433": "https://www.lieliskadavana.lv/naksnosana/sigulda",
+    "434": "https://www.lieliskadavana.lv/naksnosana/spa-atputa",
+    "435": "https://www.lieliskadavana.lv/naksnosana/atputa-pie-juras",
+    "436": "https://www.lieliskadavana.lv/naksnosana/atputas-vietas/atputa-pie-ezera",
+    "437": "https://www.lieliskadavana.lv/naksnosana/atputas-vietas/atputa-laukos",
+    "438": "https://www.lieliskadavana.lv/naksnosana/atputas-namins",
+    "439": "https://www.lieliskadavana.lv/naksnosana/atputas-komplekss",
+    "440": "https://www.lieliskadavana.lv/spa-un-masazas/spa/dienas-spa",
+    "441": "https://www.lieliskadavana.lv/spa-un-masazas/masazas/ajurvedas-masaza",
+    "442": "https://www.lieliskadavana.lv/spa-un-masazas/arstnieciska-masaza",
+    "443": "https://www.lieliskadavana.lv/spa-un-masazas/masazas/galvas-masaza",
+    "444": "https://www.lieliskadavana.lv/spa-un-masazas/masazas/grutniecu-masaza",
+    "445": "https://www.lieliskadavana.lv/spa-un-masazas/masazas/karsto-akmenu-masaza",
+    "446": "https://www.lieliskadavana.lv/spa-un-masazas/limfodrenazas-masaza",
+    "447": "https://www.lieliskadavana.lv/spa-un-masazas/lpg-masaza",
+    "448": "https://www.lieliskadavana.lv/spa-un-masazas/masazas/pedu-masaza",
+    "449": "https://www.lieliskadavana.lv/spa-un-masazas/relaksejosa-masaza",
+    "450": "https://www.lieliskadavana.lv/spa-un-masazas/sejas-masaza",
+    "451": "https://www.lieliskadavana.lv/spa-un-masazas/masazas/sokolades-masaza",
+    "452": "https://www.lieliskadavana.lv/spa-un-masazas/masazas/sporta-masaza",
+    "453": "https://www.lieliskadavana.lv/spa-un-masazas/taizemes-masaza",
+    "454": "https://www.lieliskadavana.lv/udens-piedzivojumi/makskeresana",
+    "456": "https://www.lieliskadavana.lv/udens-piedzivojumi/izbraucieni-ar-laivam/kajaku-noma",
+    "457": "https://www.lieliskadavana.lv/udens-piedzivojumi/kruizs",
+    "458": "https://www.lieliskadavana.lv/udens-piedzivojumi/sup-noma",
+    "459": "https://www.lieliskadavana.lv/udens-piedzivojumi/brauciens-ar-kugiti",
+    "460": "https://www.lieliskadavana.lv/udens-piedzivojumi/udens-motociklu-noma",
+    "461": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/floutings",
+    "462": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/sals-istaba",
+    "463": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts",
+    "464": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/hammam",
+    "465": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/dns-tests",
+    "466": "https://www.lieliskadavana.lv/aktiva-atputa/sausana/sautuve",
+    "467": "https://www.lieliskadavana.lv/aktiva-atputa/sausana/lazertags",
+    "468": "https://www.lieliskadavana.lv/aktiva-atputa/sausana/loka-sausana",
+    "469": "https://www.lieliskadavana.lv/aktiva-atputa/sports",
+    "470": "https://www.lieliskadavana.lv/aktiva-atputa/boulderings",
+    "471": "https://www.lieliskadavana.lv/aktiva-atputa/virtuala-realitate",
+    "472": "https://www.lieliskadavana.lv/aktiva-atputa/speles",
+    "473": "https://www.lieliskadavana.lv/izklaide-pie-stures/superauto/brauciens-ar-ferrari",
+    "474": "https://www.lieliskadavana.lv/izklaide-pie-stures/superauto/brauciens-ar-lamborghini",
+    "475": "https://www.lieliskadavana.lv/izklaide-pie-stures/drifts",
+    "476": "https://www.lieliskadavana.lv/izklaide-pie-stures/brauciens-ar-kvadraciklu",
+    "477": "https://www.lieliskadavana.lv/izklaide-pie-stures/brauciens-ar-motociklu",
+    "478": "https://www.lieliskadavana.lv/izklaide-pie-stures/brauciens-ar-bagiju",
+    "479": "https://www.lieliskadavana.lv/izklaide-pie-stures/brauksanas-apmaciba",
+    "480": "https://www.lieliskadavana.lv/jautras-davanas/fotosesija/individuala-fotosesija",
+    "481": "https://www.lieliskadavana.lv/jautras-davanas/fotosesija/paru-fotosesija",
+    "482": "https://www.lieliskadavana.lv/jautras-davanas/fotosesija/grutniecu-fotosesija",
+    "483": "https://www.lieliskadavana.lv/jautras-davanas/fotosesija/ziemassvetku-fotosesija",
+    "484": "https://www.lieliskadavana.lv/jautras-davanas/karikaturas",
+    "485": "https://www.lieliskadavana.lv/kursi-un-meistarklases/floristikas-kursi",
+    "486": "https://www.lieliskadavana.lv/kursi-un-meistarklases/ziepju-izgatavosana",
+    "488": "https://www.lieliskadavana.lv/kursi-un-meistarklases/foto-kursi",
+    "489": "https://www.lieliskadavana.lv/kursi-un-meistarklases/gleznosanas-kursi",
+    "490": "https://www.lieliskadavana.lv/kursi-un-meistarklases/online-kursi",
+    "491": "https://www.lieliskadavana.lv/kursi-un-meistarklases/rotaslietu-izgatavosana",
+    "492": "https://www.lieliskadavana.lv/kursi-un-meistarklases/smarzu-darbnica",
+    "493": "https://www.lieliskadavana.lv/kursi-un-meistarklases/muzikas-nodarbibas",
+    "495": "https://www.lieliskadavana.lv/jautras-davanas/zoo",
+    "496": "https://www.lieliskadavana.lv/jautras-davanas/teatri",
+    "497": "https://www.lieliskadavana.lv/jautras-davanas/interesantas-davanas",
+    "498": "https://www.lieliskadavana.lv/skaistumkopsana/pedikirs",
+    "499": "https://www.lieliskadavana.lv/skaistumkopsana/vaksacija",
+    "500": "https://www.lieliskadavana.lv/skaistumkopsana/skropstasuzacis",
+    "501": "https://www.lieliskadavana.lv/skaistumkopsana/barbershop",
+    "502": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/zobarstnieciba",
+    "503": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/zobarstnieciba/zobu-balinasana",
+    "504": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/zobarstnieciba/zobu-higiena",
+    "505": "https://www.lieliskadavana.lv/skaistumkopsana/tetovesana",
+    "506": "https://www.lieliskadavana.lv/skaistumkopsana/deguna-nabas-pirsings",
+    "507": "https://www.lieliskadavana.lv/davanas-gardeziem/vakarinas/romantiskas-vakarinas",
+    "508": "https://www.lieliskadavana.lv/davanas-gardeziem/restorani-un-kafejnicas",
+    "509": "https://www.lieliskadavana.lv/davanas-gardeziem/degustacijas/vina-degustacija",
+    "510": "https://www.lieliskadavana.lv/davanas-gardeziem/degustacijas/alus-degustacija",
+    "511": "https://www.lieliskadavana.lv/davanas-gardeziem/deserts",
+    "515": "https://www.lieliskadavana.lv/davanas-gardeziem/edienu-piegade",
+    "516": "https://www.lieliskadavana.lv/atputa-arzemes/igaunija/atputa-tallina",
+    "517": "https://www.lieliskadavana.lv/atputa-arzemes/igaunija/atputa-tartu",
+    "518": "https://www.lieliskadavana.lv/atputa-arzemes/igaunija/spa-pernava",
+    "519": "https://www.lieliskadavana.lv/atputa-arzemes/igaunija/atputa-sarema",
+    "520": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-lietuva/sanatorijas-lietuva",
+    "521": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-lietuva/atputa-vilna",
+    "522": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-lietuva/atputa-saulos",
+    "523": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-lietuva/atputa-trakos",
+    "525": "https://www.lieliskadavana.lv/naksnosana/romantiska-atputa-diviem",
+    "529": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts-rituals",
+    "532": "https://www.lieliskadavana.lv/naksnosana/atputas-vietas/atputa-pie-dabas",
+    "536": "https://www.lieliskadavana.lv/davanas-gardeziem/vakarinas/tumsa",
+    "537": "https://www.lieliskadavana.lv/jautras-davanas/fotosesija/gimenes-fotosesija",
+    "538": "https://www.lieliskadavana.lv/aktiva-atputa/sausana/airsoft",
+    "539": "https://www.lieliskadavana.lv/atputa-arzemes/igaunija/spa-igaunija",
+    "540": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-lietuva/spa-lietuva",
+    "542": "https://www.lieliskadavana.lv/aktiva-atputa/peintbols",
+    "543": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/leciens-ar-gumiju",
+    "548": "https://www.lieliskadavana.lv/tartu",
+    "554": "https://www.lieliskadavana.lv/davanu-kartes",
+    "555": "https://www.lieliskadavana.lv/spa-un-masazas/spa/spa-davanu-kartes",
+    "556": "https://www.lieliskadavana.lv/restoranu-davanu-kartes",
+    "557": "https://www.lieliskadavana.lv/piedzivojumu-davanu-kartes",
+    "558": "https://www.lieliskadavana.lv/veikalu-davanu-kartes",
+    "559": "https://www.lieliskadavana.lv/viesnicu-davanu-kartes",
+    "560": "https://www.lieliskadavana.lv/spa-un-masazas/masazas",
+    "561": "https://www.lieliskadavana.lv/spa-un-masazas/spa",
+    "563": "https://www.lieliskadavana.lv/spa-un-masazas/spa-viesnicas-latvija",
+    "564": "https://www.lieliskadavana.lv/spa-un-masazas/spa-viesnicas-latvija/spa-muizas",
+    "565": "https://www.lieliskadavana.lv/spa-un-masazas/masazas/vakuuma-masaza",
+    "566": "https://www.lieliskadavana.lv/spa-un-masazas/masazas/taktila-masaza",
+    "568": "https://www.lieliskadavana.lv/spa-un-masazas/zemudens-masaza",
+    "574": "https://www.lieliskadavana.lv/naksnosana/atputas-vietas",
+    "575": "https://www.lieliskadavana.lv/naksnosana/naktsmitnes",
+    "576": "https://www.lieliskadavana.lv/naksnosana/naktsmitnes/naktsmitnes-pie-juras",
+    "577": "https://www.lieliskadavana.lv/naksnosana/naktsmitnes/naktsmitnes-pie-ezera",
+    "578": "https://www.lieliskadavana.lv/naksnosana/naktsmitnes/skaistas-naktsmitnes-latvija",
+    "579": "https://www.lieliskadavana.lv/naksnosana/naktsmitnes/romantiskas-naktsmitnes",
+    "580": "https://www.lieliskadavana.lv/naksnosana/sanatorija",
+    "581": "https://www.lieliskadavana.lv/naksnosana/atputas-namins/namini-pie-ezera",
+    "582": "https://www.lieliskadavana.lv/naksnosana/atputas-namins/namini-pie-juras",
+    "583": "https://www.lieliskadavana.lv/naksnosana/spa-atputa/spa-atputa-riga",
+    "584": "https://www.lieliskadavana.lv/naksnosana/spa-atputa/spa-atputa-jurmala",
+    "585": "https://www.lieliskadavana.lv/naksnosana/spa-atputa/spa-atputa-latvija",
+    "586": "https://www.lieliskadavana.lv/naksnosana/spa-atputa/spa-atputa-lietuva",
+    "587": "https://www.lieliskadavana.lv/naksnosana/spa-atputa/spa-atputa-igaunija",
+    "588": "https://www.lieliskadavana.lv/naksnosana/atputa-ar-berniem",
+    "589": "https://www.lieliskadavana.lv/naksnosana/atputa-arpus-rigas",
+    "592": "https://www.lieliskadavana.lv/udens-piedzivojumi/izbraucieni-ar-laivam/kanoe-noma",
+    "593": "https://www.lieliskadavana.lv/udens-piedzivojumi/izbraucieni-ar-laivam/motorlaivas",
+    "594": "https://www.lieliskadavana.lv/udens-piedzivojumi/izbraucieni-ar-laivam/airu-laivas",
+    "595": "https://www.lieliskadavana.lv/udens-piedzivojumi/makskeresana/makskeresana-ar-naktsmitni",
+    "596": "https://www.lieliskadavana.lv/udens-piedzivojumi/brauciens-ar-kugi-vai-jahtu/jahtu-noma",
+    "597": "https://www.lieliskadavana.lv/udens-piedzivojumi/brauciens-ar-kugi-vai-jahtu/motorjahtas",
+    "598": "https://www.lieliskadavana.lv/udens-piedzivojumi/plosti",
+    "599": "https://www.lieliskadavana.lv/udens-piedzivojumi/udens-formulas",
+    "600": "https://www.lieliskadavana.lv/udens-piedzivojumi/efoil",
+    "612": "https://www.lieliskadavana.lv/kursi-un-meistarklases/meistarklases",
+    "613": "https://www.lieliskadavana.lv/kursi-un-meistarklases/meistarklases/berniem-meistarklases",
+    "614": "https://www.lieliskadavana.lv/kursi-un-meistarklases/meistarklases/meistarklases-sievietem",
+    "615": "https://www.lieliskadavana.lv/kursi-un-meistarklases/meistarklases/meistarklases-viriesiem",
+    "617": "https://www.lieliskadavana.lv/kursi-un-meistarklases/kursi/auto-kursi",
+    "618": "https://www.lieliskadavana.lv/kursi-un-meistarklases/kursi-pieaugusajiem",
+    "619": "https://www.lieliskadavana.lv/kursi-un-meistarklases/keramikas-meistarklase",
+    "620": "https://www.lieliskadavana.lv/kursi-un-meistarklases/gatavosanas-meistarklases",
+    "621": "https://www.lieliskadavana.lv/kursi-un-meistarklases/gatavosanas-meistarklases/makarunu-meistarklase",
+    "622": "https://www.lieliskadavana.lv/kursi-un-meistarklases/gatavosanas-meistarklases/kuku-cepsanas-meistarklase",
+    "623": "https://www.lieliskadavana.lv/kursi-un-meistarklases/gatavosanas-meistarklases/picu-meistarklase",
+    "624": "https://www.lieliskadavana.lv/kursi-un-meistarklases/zimesanas-kursi",
+    "631": "https://www.lieliskadavana.lv/jautras-davanas/preses-abonementi/zurnali-viriesiem",
+    "632": "https://www.lieliskadavana.lv/jautras-davanas/preses-abonementi/bernu-zurnali",
+    "633": "https://www.lieliskadavana.lv/jautras-davanas/preses-abonementi/jauniesu-zurnali",
+    "634": "https://www.lieliskadavana.lv/jautras-davanas/preses-abonementi/krustvardu-miklas",
+    "635": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts/pirtis-riga",
+    "636": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts/pirtis-pieriga",
+    "637": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts/koka-pirtis",
+    "638": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts/mazas-pirtis",
+    "639": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts/pirts-majas",
+    "640": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts/pirtis-ar-kublu",
+    "641": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts-rituals/pirts-rituals-diviem",
+    "642": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts-rituals/pirts-rituals-ar-pirtnieku",
+    "643": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pirts-rituals/pirts-spa",
+    "644": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/baseini/baseini-riga",
+    "645": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/baseini/baseini-jurmala",
+    "650": "https://www.lieliskadavana.lv/aktiva-atputa/golfs",
+    "651": "https://www.lieliskadavana.lv/aktiva-atputa/golfs/klasiskais-golfs",
+    "652": "https://www.lieliskadavana.lv/aktiva-atputa/golfs/disku-golfs",
+    "653": "https://www.lieliskadavana.lv/aktiva-atputa/golfs/mini-golf",
+    "654": "https://www.lieliskadavana.lv/aktiva-atputa/golfs/futbolgolfs",
+    "655": "https://www.lieliskadavana.lv/aktiva-atputa/skvoss",
+    "656": "https://www.lieliskadavana.lv/aktiva-atputa/izklaides",
+    "658": "https://www.lieliskadavana.lv/aktiva-atputa/sporta-klubi",
+    "659": "https://www.lieliskadavana.lv/aktiva-atputa/joga",
+    "660": "https://www.lieliskadavana.lv/aktiva-atputa/orientesanas",
+    "661": "https://www.lieliskadavana.lv/aktiva-atputa/pargajieni",
+    "662": "https://www.lieliskadavana.lv/aktiva-atputa/kerlings",
+    "663": "https://www.lieliskadavana.lv/aktiva-atputa/kikbokss",
+    "665": "https://www.lieliskadavana.lv/davanas-gardeziem/restorani",
+    "666": "https://www.lieliskadavana.lv/davanas-gardeziem/restorani/italu-restorans",
+    "667": "https://www.lieliskadavana.lv/davanas-gardeziem/restorani/armenu-restorans",
+    "668": "https://www.lieliskadavana.lv/davanas-gardeziem/kafejnicas",
+    "669": "https://www.lieliskadavana.lv/davanas-gardeziem/kafejnicas/kafejnicas-vecriga",
+    "670": "https://www.lieliskadavana.lv/davanas-gardeziem/kafejnicas/kafejnica-rigas-centra",
+    "671": "https://www.lieliskadavana.lv/davanas-gardeziem/kafejnicas/omuligas-kafejnicas",
+    "672": "https://www.lieliskadavana.lv/davanas-gardeziem/kafejnicas/labakas-kafejnicas-riga",
+    "673": "https://www.lieliskadavana.lv/davanas-gardeziem/brokastis",
+    "675": "https://www.lieliskadavana.lv/davanas-gardeziem/vakarinas/vakarinas-restorana",
+    "676": "https://www.lieliskadavana.lv/davanas-gardeziem/vakarinas/gimenei-draudzigas-vakarinas",
+    "677": "https://www.lieliskadavana.lv/davanas-gardeziem/vakarinas/kur-paest-vakarinas-riga",
+    "679": "https://www.lieliskadavana.lv/davanas-gardeziem/degustacijas/smakovkas-degustacija",
+    "680": "https://www.lieliskadavana.lv/davanas-gardeziem/restorani/picerijas",
+    "681": "https://www.lieliskadavana.lv/davanas-gardeziem/restorani/labakie-restorani",
+    "682": "https://www.lieliskadavana.lv/aktiva-atputa/padel-teniss",
+    "684": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/lidojumi-ar-gaisa-balonu/lidojums-ar-gaisa-balonu-jelgava",
+    "685": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/lidojums-virs-rigas",
+    "686": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/lidojums-virs-rigas/lidojums-virs-siguldas",
+    "687": "https://www.lieliskadavana.lv/lidojumi-un-lecieni/lidojums-ar-motodeltaplanu",
+    "709": "https://www.lieliskadavana.lv/visa-pasaule",
+    "712": "https://www.lieliskadavana.lv/skaistumkopsana/frizetava",
+    "713": "https://www.lieliskadavana.lv/skaistumkopsana/ausu-caurdursana",
+    "714": "https://www.lieliskadavana.lv/skaistumkopsana/ausu-caurdursana/ausu-caurdursana-riga",
+    "715": "https://www.lieliskadavana.lv/skaistumkopsana/ausu-caurdursana/ausu-caurdursana-berniem",
+    "716": "https://www.lieliskadavana.lv/skaistumkopsana/manikirs/japanu-manikirs",
+    "717": "https://www.lieliskadavana.lv/skaistumkopsana/manikirs/francu-manikirs",
+    "718": "https://www.lieliskadavana.lv/skaistumkopsana/manikirs/klasiskais-manikirs",
+    "719": "https://www.lieliskadavana.lv/skaistumkopsana/pedikirs/arstnieciskais-pedikirs",
+    "720": "https://www.lieliskadavana.lv/skaistumkopsana/pedikirs/pedikirs-riga",
+    "721": "https://www.lieliskadavana.lv/skaistumkopsana/vaksacija/vaksacija-riga",
+    "722": "https://www.lieliskadavana.lv/skaistumkopsana/vaksacija/bikini-vaksacija",
+    "723": "https://www.lieliskadavana.lv/skaistumkopsana/vaksacija/vaksacija-viriesiem",
+    "724": "https://www.lieliskadavana.lv/skaistumkopsana/vaksacija/vaksacija-viriesiem/muguras-vaksacija-viriesiem",
+    "725": "https://www.lieliskadavana.lv/skaistumkopsana/vaksacija/sejas-vaksacija",
+    "726": "https://www.lieliskadavana.lv/skaistumkopsana/skropstasuzacis/skropstu-pieaudzesana",
+    "727": "https://www.lieliskadavana.lv/skaistumkopsana/skropstasuzacis/skropstu-laminesana",
+    "728": "https://www.lieliskadavana.lv/skaistumkopsana/skropstasuzacis/uzacu-laminesana",
+    "729": "https://www.lieliskadavana.lv/skaistumkopsana/skropstasuzacis/permanentas-uzacis",
+    "730": "https://www.lieliskadavana.lv/skaistumkopsana/skropstasuzacis/uzacu-korekcija",
+    "731": "https://www.lieliskadavana.lv/skaistumkopsana/skropstasuzacis/uzacu-krasosana",
+    "732": "https://www.lieliskadavana.lv/skaistumkopsana/terapijas",
+    "733": "https://www.lieliskadavana.lv/skaistumkopsana/terapijas/mezoterapija",
+    "734": "https://www.lieliskadavana.lv/skaistumkopsana/terapijas/krioterapija",
+    "735": "https://www.lieliskadavana.lv/skaistumkopsana/terapijas/ultraskanas-terapija",
+    "736": "https://www.lieliskadavana.lv/skaistumkopsana/terapijas/endosferas-terapija",
+    "737": "https://www.lieliskadavana.lv/skaistumkopsana/lazerepilacija",
+    "738": "https://www.lieliskadavana.lv/skaistumkopsana/anti-ageing",
+    "739": "https://www.lieliskadavana.lv/skaistumkopsana/liftings",
+    "740": "https://www.lieliskadavana.lv/skaistumkopsana/dermapen",
+    "741": "https://www.lieliskadavana.lv/skaistumkopsana/kavitacija",
+    "744": "https://www.lieliskadavana.lv/skaistumkopsana/terapijas/fizioterapija",
+    "756": "https://www.lieliskadavana.lv/kursi-un-meistarklases/kursi/masazu-kursi",
+    "757": "https://www.lieliskadavana.lv/naksnosana/glempings",
+    "759": "https://www.lieliskadavana.lv/atputa-arzemes/naksnosana-lietuva/klaipeda",
+    "760": "https://www.lieliskadavana.lv/spa-un-masazas/spa-palanga",
+    "765": "https://www.lieliskadavana.lv/spa-un-masazas/spa-druskininki",
+    "766": "https://www.lieliskadavana.lv/kursi-un-meistarklases/smarzu-meistarklase",
+    "767": "https://www.lieliskadavana.lv/skaistumkopsana/terapijas/aromaterapija",
+    "768": "https://www.lieliskadavana.lv/kursi-un-meistarklases/svecu-liesanas-meistarklase",
+    "770": "https://www.lieliskadavana.lv/davanas-gardeziem/azijas-virtuve",
+    "771": "https://www.lieliskadavana.lv/aktiva-atputa/biljards",
+    "780": "https://www.lieliskadavana.lv/veselibai-un-labsajutai/pilates",
+    "781": "https://www.lieliskadavana.lv/naksnosana/pils",
+    "782": "https://www.lieliskadavana.lv/rotaslietas",
 }
