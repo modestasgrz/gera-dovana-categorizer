@@ -61,7 +61,7 @@ jobs:
           path: GiftVoucherCategorizer-macos-arm64.zip
 
   build-macos-intel:
-    runs-on: macos-13  # Intel (x86_64)
+    runs-on: macos-15-intel  # Intel (x86_64), available until Aug 2027
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

@@ -150,6 +150,8 @@ Builds both macOS architectures (ARM64 + Intel) for testing without creating a r
 
 **Usage:** Actions → "macOS Build" → Run workflow
 
+**Note:** Intel builds use the `macos-15-intel` runner, which will be deprecated in August 2027 as GitHub transitions to ARM64-only macOS runners.
+
 ## Building Locally
 
 **Requirements:** Python 3.12+, [uv](https://docs.astral.sh/uv/)
