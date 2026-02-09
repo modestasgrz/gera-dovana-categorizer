@@ -6,10 +6,12 @@ This application automatically categorizes gift voucher CSV data by analyzing pr
 
 ### Pre-built Executables
 
-Download the executable for your platform from the releases page:
-- **macOS**: `GiftVoucherCategorizer.app`
-- **Windows**: `GiftVoucherCategorizer/` (folder; run `GiftVoucherCategorizer.exe` inside)
-- **Linux**: `GiftVoucherCategorizer/` (folder; run `GiftVoucherCategorizer` inside, requires `chmod +x`)
+Download the executable for your platform from the [GitHub Releases](../../releases) page:
+- **Windows**: `GiftVoucherCategorizer-windows.zip` (extract and run `GiftVoucherCategorizer.exe`)
+- **macOS (Apple Silicon)**: `GiftVoucherCategorizer-macos-arm64.zip`
+- **macOS (Intel)**: `GiftVoucherCategorizer-macos-intel.zip`
+
+For detailed information about releases and building, see the [Downloads & Releases](#downloads--releases) section below.
 
 ### From Source
 
@@ -99,7 +101,56 @@ Run linter + formatter + type checker:
 make check
 ```
 
-## Building from Source
+## Downloads & Releases
+
+### Pre-built Releases
+
+Pre-built executables for all platforms are available on the [GitHub Releases](../../releases) page.
+
+Each release includes:
+- **Windows** (`GiftVoucherCategorizer-windows.zip`) - x64 executable
+- **macOS ARM64** (`GiftVoucherCategorizer-macos-arm64.zip`) - Apple Silicon (M1/M2/M3/M4)
+- **macOS Intel** (`GiftVoucherCategorizer-macos-intel.zip`) - Intel Macs
+
+Simply download the appropriate ZIP file for your platform and extract it.
+
+### GitHub Actions Workflows
+
+This project uses GitHub Actions to automatically build executables for all platforms. Three workflows are available:
+
+#### 1. **Build and Release** (Primary)
+**File:** `.github/workflows/release.yml`
+
+Creates a new GitHub release with all platform builds attached.
+
+**Usage:**
+1. Go to **Actions** tab in GitHub
+2. Select **"Build and Release"** workflow
+3. Click **"Run workflow"**
+4. Enter version number (e.g., `v1.0.0`)
+5. Click **"Run workflow"**
+
+The workflow will:
+- Build for Windows (x64)
+- Build for macOS ARM64 (Apple Silicon)
+- Build for macOS Intel (x86_64)
+- Create a new GitHub release with all three builds as downloadable ZIP files
+
+#### 2. **Windows Build** (Legacy/Testing)
+**File:** `.github/workflows/windows-build.yml`
+
+Builds Windows executable only (for testing without creating a release).
+
+**Usage:** Actions → "Windows Build" → Run workflow
+
+#### 3. **macOS Build** (Legacy/Testing)
+**File:** `.github/workflows/macos-build.yml`
+
+Builds both macOS architectures (ARM64 + Intel) for testing without creating a release.
+
+**Usage:** Actions → "macOS Build" → Run workflow
+
+## Building Locally
 
 **Requirements:** Python 3.12+, [uv](https://docs.astral.sh/uv/)
 
